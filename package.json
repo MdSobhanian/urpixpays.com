@@ -14,13 +14,16 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.9.0",
+    "material-icons": "^0.3.1",
     "mdbvue": "^6.5.1",
     "vue": "^2.6.11",
     "vue-good-links": "0.0.3",
+    "vue-light-gallery": "^1.0.1",
     "vue-router": "^3.0.1",
     "vue-stack-grid": "^1.1.0",
     "vue-stack-grid-component": "^1.0.1",
-    "vue-text-marquee": "^1.1.0"
+    "vue-text-marquee": "^1.1.0",
+    "vuesax": "^3.11.13"
   },
   "devDependencies": {
     "aos": "^3.0.0-beta.6",

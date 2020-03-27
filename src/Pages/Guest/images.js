@@ -1,28 +1,24 @@
 export default
 [
   {
-    img:'https://urpixpays.com/public/uploads/info_images/1567756405Laura.jpg',
+    url:'https://66.media.tumblr.com/523ee4ad81e58df58defe988c4c02050/tumblr_p0fffxcVa11wc8a4vo1_1280.jpg',
     label:'test',
     link:'https://www.instagram.com/elaopatowiecka/'
   },
   {
-    img:'https://urpixpays.com/public/uploads/info_images/1585026750Ela.jpg',
+    url:'https://66.media.tumblr.com/523ee4ad81e58df58defe988c4c02050/tumblr_p0fffxcVa11wc8a4vo1_1280.jpg',
     label:'test',
     link:'https://www.facebook.com/laurabarvainytemodelling/'
   },
   {
-    img:'https://urpixpays.com/public/uploads/info_images/1567756405Laura.jpg ',
+    url:'https://66.media.tumblr.com/523ee4ad81e58df58defe988c4c02050/tumblr_p0fffxcVa11wc8a4vo1_1280.jpg',
     label:'test',
     link:'https://www.facebook.com/laurabarvainytemodelling/'
   },
   {
-    img:'https://urpixpays.com/public/uploads/info_images/1567756405Laura.jpg ',
+    url:'https://66.media.tumblr.com/523ee4ad81e58df58defe988c4c02050/tumblr_p0fffxcVa11wc8a4vo1_1280.jpg',
     label:'test',
     link:'https://www.facebook.com/laurabarvainytemodelling/'
   },
-  {
-    img:'https://urpixpays.com/public/uploads/info_images/1567756405Laura.jpg ',
-    label:'test',
-    link:'https://www.facebook.com/laurabarvainytemodelling/'
-  },
+
 ]

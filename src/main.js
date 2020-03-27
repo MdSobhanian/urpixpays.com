@@ -24,7 +24,13 @@ import VueGoodLinks from 'vue-good-links';
 import 'vue-good-links/dist/vue-good-links.css';
 
 Vue.use(VueGoodLinks);
+import Vuesax from 'vuesax'
 
+import 'vuesax/dist/vuesax.css' //Vuesax styles
+import 'material-icons/iconfont/material-icons.css';
+Vue.use(Vuesax, {
+  // options here
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -5,7 +5,45 @@
   text-align: center;
   color: #2c3e50;
 }
+.navar-container{
+  .navbar-dark .navbar-nav .nav-link{
+    color: white;
+  }
+  .navbar-nav{
+    .btn{
+      color: white!important;
+    }
+  }
+  @media (max-width: 992px){
+    .navbar-collapse{
+      position: absolute;
+      top: 73px;
+      background-color: #161e2c;
+      width: 100%;
+      left: 0;
+      z-index: 10;
+      border-top: solid 1px white;
+      display: flex;
+      flex-wrap: wrap;
+      .main_menu{
+        flex:1.2;
+        min-width: 200px;
+      }
+      .login_menu{
+        min-width: 200px;
+        flex:.8;
+        text-align: center;
+        margin: auto!important;
+        div{
+          text-align: center;
 
+        }
+
+      }
+    }
+  }
+
+}
 .footer-area {
   background-color: #161e2c;
   padding-top: 50px;
@@ -71,9 +109,6 @@
   width: 100%;overflow: hidden;
   .video_div{
     position: relative;
-    .video-player{
-      width: 100%;
-    }
     .overlay{
       background: #646464;
       opacity: .3;
@@ -108,84 +143,82 @@
   }
 
 }
-/*-----------Navar container------------*/
-.navar-container{
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index:10;
-  .v-marquee {
-    background-color: #17a2b8 !important
+@keyframes imgZoom {
+  0%{
+    transform:scale(1)
   }
-  .navbar-dark .navbar-nav .nav-link {
-    color: white !important;
-    height: 40px;
+  50%{
+    transform:scale(1.06)
   }
-  .log-btn {
-    border: 0.5px solid white;
-    color: white;
-    font-size: 13px;
+  100%{
+    transform:scale(1)
   }
-  .log-btn:hover {
-    color: black !important;
-    background: white !important;
-    outline: 0 !important;
-    border: 0 !important;
+}
+@keyframes img-hover-animation {
+  0%{
+    opacity: 0;
   }
-  .dropdown-menu-right.show {
-    background: none;
-    border: none;
+  100%{
+    opacity: 1;
   }
-  .dropdown-item {
-    border-bottom: 0.5px solid white;
-    color: white;
-    font-size: 13px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .projects_div {
-    top: 28px;
-    border-right: solid 1px gray;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8) !important;
-    background-clip: padding-box;
-    border: 1px solid #fff;
-    border-radius: 0 !important;
-    color: white !important;
-    z-index: 1000;
-  }
-  #nav-collapse{
-    font-size: 13px;
-  }
-  .btn-container{
-    float: right;
-    width: 250px;
-    .hide-menu-btn{
-      margin-top: -7px;
-      margin-left: -14px;
-      font-size: 20px;
+}
+.best-image-div{
+  margin-top: 20px;
+  .stack-item{
+    .img_div:hover{
+      animation: imgZoom 1s;
     }
-  }
-  .hide-btn {
-    width: 40px;
-    height: 40px;
-    float: left;
-    display: none;
-  }
-  .hide-btn a{
-    position: absolute;
-    margin-top: -22px;
-    width: 30px;
-    height: 30px;
-    float: left;
-  }
-  @media only screen and (max-width: 993px) {
-    #nav-collapse {
-      display: none;
-    }
-    .hide-btn {
-      display: block;
+    .img_div{
+      img{
+        width: 100%;
+        border-radius: 30px;
+      }
+      .img-hover:hover{
+        animation: img-hover-animation 1s;
+        opacity: 1;
+      }
+      .img-hover{
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        .img-body{
+          position: relative;
+          height: 100%;
+          width: 100%;
+          .zoom-img{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 3px;
+            width: 35px;
+            border-radius: 10px;
+            border: solid 1px white;
+            background: rgba(255,255,255,.5);
+            font-weight: bold;
+          }
+          .zoom-img:hover{
+            background: rgba(255,255,255,1);
+          }
+          .title{
+            background: rgba(0,0,0,.8);
+            border-radius: 0 0 30px 30px;
+            bottom: 0;
+            width: 100%;
+            min-height: 60px;
+            position: absolute;
+            display: table;
+            color: white;
+            div{
+              display: table-cell;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
     }
   }
 }
-/*-------------------------------------*/
+

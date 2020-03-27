@@ -1,7 +1,7 @@
 <template>
   <div>
     <navbar></navbar>
-    <div style="min-height: 80vh;margin-top: 77px">
+    <div style="min-height: 80vh;">
       <router-view>
       </router-view>
     </div>

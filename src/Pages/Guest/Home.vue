@@ -1,0 +1,78 @@
+<template>
+  <div class="ladingPage">
+    <b-row >
+      <b-col sm="12">
+        <div class="video_div">
+          <video ref="videoRef"  height="100%" loop autoplay muted src="../../assets/Urpixpays-4notext.mp4">
+          </video>
+
+          <div class="title"  data-aos="fade-up">
+            <div>
+              <h1>SUBMIT YOUR PHOTOS AND WIN CASH!</h1>
+              <h3>You will love taking photos like never before.</h3>
+              <b-button variant="outline-light" >Join Now</b-button>
+            </div>
+          </div>
+        </div>
+      </b-col>
+      <b-col sm="6">
+        <div class="video_div">
+          <img src="../../assets/imgs/left.jpg" width="100%">
+          <div class="title overlay"></div>
+          <div class="title"  data-aos="fade-right">
+            <div class="font1">
+              Participate in challenges. Learn from the best photographers around the world and earn money.
+            </div>
+          </div>
+        </div>
+      </b-col>
+      <b-col sm="6">
+        <div class="video_div">
+          <img src="../../assets/imgs/rightt.jpg" width="100%">
+          <div class="title overlay"></div>
+          <div class="title"  data-aos="fade-left">
+            <div class="font1">
+              It doesn’t matter whether you are a professional or amateur photographer, or just starting out. If you take good photos, then money can be on its way to your pocket.
+            </div>
+          </div>
+        </div>
+      </b-col>
+      <b-col sm="12">
+        <div class="video_div">
+          <img src="../../assets/imgs/bottom.jpg" width="100%">
+          <div class="title overlay"></div>
+          <div class="title"  data-aos="fade-down">
+            <div class="font1">
+
+            </div>
+          </div>
+        </div>
+      </b-col>
+    </b-row>
+  </div>
+
+</template>
+<script>
+  import AOS from 'aos';
+  export default {
+    mounted() {
+      //this.$refs.videoRef.src = "";
+      AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+      });
+
+    },
+    created() {
+
+    },
+    methods:{
+
+    }
+  }
+</script>
+<style scoped>
+  .col-sm-6{
+    padding: 0!important;
+  }
+</style>

@@ -3,9 +3,8 @@
     <b-row >
       <b-col sm="12">
         <div class="video_div">
-          <video ref="videoRef"  height="100%" loop autoplay muted src="../../assets/Urpixpays-4notext.mp4">
+          <video ref="videoRef" class="video-player" loop autoplay muted src="../../assets/Urpixpays-4notext.mp4">
           </video>
-
           <div class="title"  data-aos="fade-up">
             <div>
               <h1>SUBMIT YOUR PHOTOS AND WIN CASH!</h1>

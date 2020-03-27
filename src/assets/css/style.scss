@@ -71,6 +71,9 @@
   width: 100%;overflow: hidden;
   .video_div{
     position: relative;
+    .video-player{
+      width: 100%;
+    }
     .overlay{
       background: #646464;
       opacity: .3;
@@ -105,4 +108,84 @@
   }
 
 }
-
+/*-----------Navar container------------*/
+.navar-container{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index:10;
+  .v-marquee {
+    background-color: #17a2b8 !important
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+    height: 40px;
+  }
+  .log-btn {
+    border: 0.5px solid white;
+    color: white;
+    font-size: 13px;
+  }
+  .log-btn:hover {
+    color: black !important;
+    background: white !important;
+    outline: 0 !important;
+    border: 0 !important;
+  }
+  .dropdown-menu-right.show {
+    background: none;
+    border: none;
+  }
+  .dropdown-item {
+    border-bottom: 0.5px solid white;
+    color: white;
+    font-size: 13px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+  .projects_div {
+    top: 28px;
+    border-right: solid 1px gray;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-clip: padding-box;
+    border: 1px solid #fff;
+    border-radius: 0 !important;
+    color: white !important;
+    z-index: 1000;
+  }
+  #nav-collapse{
+    font-size: 13px;
+  }
+  .btn-container{
+    float: right;
+    width: 250px;
+    .hide-menu-btn{
+      margin-top: -7px;
+      margin-left: -14px;
+      font-size: 20px;
+    }
+  }
+  .hide-btn {
+    width: 40px;
+    height: 40px;
+    float: left;
+    display: none;
+  }
+  .hide-btn a{
+    position: absolute;
+    margin-top: -22px;
+    width: 30px;
+    height: 30px;
+    float: left;
+  }
+  @media only screen and (max-width: 993px) {
+    #nav-collapse {
+      display: none;
+    }
+    .hide-btn {
+      display: block;
+    }
+  }
+}
+/*-------------------------------------*/

@@ -106,9 +106,18 @@
   }
 }
 .ladingPage{
-  width: 100%;overflow: hidden;
+  .col-sm-12{
+    padding: 0;
+  }
+  //width: 100%;overflow: hidden;
   .video_div{
     position: relative;
+    width: 100%;
+    width: 100%;
+    video{
+      width: 100%;
+      justify-content: center;
+    }
     .overlay{
       background: #646464;
       opacity: .3;
@@ -171,7 +180,9 @@
     .img_div{
       img{
         width: 100%;
-        border-radius: 30px;
+        border-radius: 10px;
+        border: 1px solid #b6b6b6;
+        padding: 5px;
       }
       .img-hover:hover{
         animation: img-hover-animation 1s;
@@ -204,7 +215,7 @@
           }
           .title{
             background: rgba(0,0,0,.8);
-            border-radius: 0 0 30px 30px;
+            //border-radius: 0 0 20px 20px;
             bottom: 0;
             width: 100%;
             min-height: 60px;
@@ -217,6 +228,38 @@
             }
           }
         }
+      }
+    }
+  }
+}
+.infoPage{
+  .row{
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .title{
+    display: table;
+    height: 100%;
+    width: 100%;
+    div{
+      display: table-cell;
+      vertical-align: middle;
+      padding: 10px;
+    }
+  }
+  .invert{
+    .row{
+      direction: rtl!important;
+      .title{
+        direction: ltr;
+      }
+    }
+  }
+  @media (max-width: 572px){
+    .invert{
+      row{
+        direction: ltr;
       }
     }
   }

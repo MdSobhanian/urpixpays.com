@@ -5,6 +5,7 @@ import HelloWorld from '@/components/HelloWorld'
 import GuestHome from '@/Pages/Guest/Home'
 import InfoPage from '@/Pages/Guest/InfoPage'
 import BestImage from '@/Pages/Guest/BestImage'
+import Gallery from '@/Pages/Guest/Gallery'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
           path: '/best_images',
           name: 'BestImage',
           component: BestImage
+        },
+        {
+          path: '/gallery',
+          name: 'BestImage',
+          component: Gallery
         }
       ]
     },

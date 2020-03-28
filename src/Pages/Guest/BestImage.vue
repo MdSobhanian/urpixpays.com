@@ -50,6 +50,7 @@
   import images from './images'
   import { LightGallery } from 'vue-light-gallery';
   import AOS from 'aos';
+  import infoPageData from "./infoPageData";
   export default {
     components: { StackGrid,LightGallery},
     mounted() {
@@ -57,7 +58,8 @@
     },
     created() {
       console.log(images)
-      this.dataset=images
+      //this.dataset=images
+      this.showMore()
       window.addEventListener('scroll', this.handleScroll);
       this.orderImgs()
     },
@@ -68,33 +70,24 @@
     data(){
       return{
         gWidth:300,
-        dataset:images,
+        images,
+        dataset:[],
         isGettingImg:false,
         sel_index:null
       }
     },
     methods:{
       showMore(){
+        let dataLength=this.dataset.length
+        console.log(this.dataset.length,images.length)
+        if (dataLength===images.length || this.isGettingImg)return;
         this.isGettingImg=true
-        let temp={
-            url:'https://66.media.tumblr.com/523ee4ad81e58df58defe988c4c02050/tumblr_p0fffxcVa11wc8a4vo1_1280.jpg',
-            title:'test',
-            link:'https://www.instagram.com/elaopatowiecka/'
+        console.log(dataLength)
+        for (let index=0;index<images.length;index++){
+          if (index>=dataLength && index<=dataLength+5){
+            this.dataset.push(images[index])
           }
-        this.dataset.push(temp)
-        temp={
-          url:'https://i.pinimg.com/564x/e7/3a/62/e73a627bc2d405ee7ff82333d44a3daa.jpg',
-          title:'test',
-          link:'https://www.instagram.com/elaopatowiecka/'
         }
-        this.dataset.push(temp)
-        this.dataset.push(temp)
-        this.dataset.push(temp)
-        this.dataset.push(temp)
-        this.dataset.push(temp)
-        this.dataset.push(temp)
-        this.dataset.push(temp)
-        this.dataset.push(temp)
         this.orderImgs()
       },
       orderImgs(){

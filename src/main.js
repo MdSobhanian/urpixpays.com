@@ -15,7 +15,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 Vue.use(AOS)
-Vue.config.productionTip = false
+/*Vue.config.productionTip = false
 import VTextMarquee from 'vue-text-marquee';
 Vue.use(VTextMarquee);
 import VueGoodLinks from 'vue-good-links';
@@ -30,7 +30,7 @@ import 'vuesax/dist/vuesax.css' //Vuesax styles
 import 'material-icons/iconfont/material-icons.css';
 Vue.use(Vuesax, {
   // options here
-})
+})*/
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

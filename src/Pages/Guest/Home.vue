@@ -1,9 +1,9 @@
 <template>
   <div class="ladingPage">
     <b-row >
-      <b-col sm="12">
+      <b-col sm="12" style="margin-bottom: -7px">
         <div class="video_div">
-          <video ref="videoRef" class="video-player" loop autoplay muted src="../../assets/Urpixpays-4notext.mp4">
+          <video ref="videoRef" class="video-player" loop autoplay muted src="/static/imgs/Urpixpays-4notext.mp4">
           </video>
           <div class="title"  data-aos="fade-up">
             <div>
@@ -16,7 +16,7 @@
       </b-col>
       <b-col sm="6">
         <div class="video_div">
-          <img src="../../assets/imgs/left.jpg" width="100%">
+          <img src="/static/imgs/left.jpg" width="100%">
           <div class="title overlay"></div>
           <div class="title"  data-aos="fade-right">
             <div class="font1">
@@ -27,7 +27,7 @@
       </b-col>
       <b-col sm="6">
         <div class="video_div">
-          <img src="../../assets/imgs/rightt.jpg" width="100%">
+          <img src="/static/imgs/rightt.jpg" width="100%">
           <div class="title overlay"></div>
           <div class="title"  data-aos="fade-left">
             <div class="font1">
@@ -38,7 +38,7 @@
       </b-col>
       <b-col sm="12">
         <div class="video_div">
-          <img src="../../assets/imgs/bottom.jpg" width="100%">
+          <img src="/static/imgs/bottom.jpg" width="100%">
           <div class="title overlay"></div>
           <div class="title"  data-aos="fade-down">
             <div class="font1">

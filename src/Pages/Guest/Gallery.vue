@@ -1,5 +1,5 @@
 <template>
-  <div class="best-image-div">
+  <div class="gallery-div">
     <LightGallery
       :images="dataset"
       :index="sel_index"
@@ -21,13 +21,17 @@
           <img :src="item.url">
           <div class="img-hover">
             <div class="img-body">
+              <div class="price">
+                $0.008
+              </div>
               <div class="title">
-                <div>
-                  {{item.title}}
-                </div>
+                {{item.title}}
+              </div>
+              <div class="cart" @click="sel_index = index">
+                <span style=""><i class="fas fa-cart-plus"></i></span>
               </div>
               <div class="zoom-img" @click="sel_index = index">
-                <b-icon icon="search" scale="1.1"></b-icon>
+                <span style=""><i style="" class="fas fa-search-plus"></i></span>
               </div>
             </div>
           </div>
@@ -61,7 +65,10 @@
       //this.dataset=images
       this.showMore()
       window.addEventListener('scroll', this.handleScroll);
-      this.orderImgs()
+      this.setInterval=setInterval(this.orderImgs,500);
+    },
+    beforeDestroy() {
+      clearInterval(this.setInterval)
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll);
@@ -73,7 +80,8 @@
         images,
         dataset:[],
         isGettingImg:false,
-        sel_index:null
+        sel_index:null,
+        setInterval:null
       }
     },
     methods:{

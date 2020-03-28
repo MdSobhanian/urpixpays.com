@@ -31,6 +31,8 @@ import 'material-icons/iconfont/material-icons.css';
 Vue.use(Vuesax, {
   // options here
 })*/
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

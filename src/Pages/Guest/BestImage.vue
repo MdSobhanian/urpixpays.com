@@ -61,7 +61,10 @@
       //this.dataset=images
       this.showMore()
       window.addEventListener('scroll', this.handleScroll);
-      this.orderImgs()
+      this.setInterval=setInterval(this.orderImgs,500);
+    },
+    beforeDestroy() {
+      clearInterval(this.setInterval)
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll);
@@ -73,7 +76,8 @@
         images,
         dataset:[],
         isGettingImg:false,
-        sel_index:null
+        sel_index:null,
+        setInterval:null
       }
     },
     methods:{
@@ -91,12 +95,9 @@
         this.orderImgs()
       },
       orderImgs(){
-        let self=this
-        setTimeout(function() {
-          self.gWidth--
-          self.gWidth++
-          self.isGettingImg=false
-        }, 500);
+        this.gWidth--
+        this.gWidth++
+        this.isGettingImg=false
       },
       rest(){
 

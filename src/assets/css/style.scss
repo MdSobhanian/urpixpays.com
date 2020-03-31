@@ -105,6 +105,9 @@
     width: 450px;
     height: 550px;
   }
+  .nav-item{
+    font-size: 13px!important;
+  }
 
   @media only screen and (max-width: 500px) {
     .congrate-modal {
@@ -151,10 +154,11 @@
           text-shadow: rgb(0, 0, 0) 3px 3px 3px;
         }
 
-        h3 {
-          color: yellow;
+        h4 {
+          color: #d9d9d9;
           font-size: 3vw;
-          text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+          font-family: "Arial Narrow";
+          margin-bottom: 20px;
         }
 
       }

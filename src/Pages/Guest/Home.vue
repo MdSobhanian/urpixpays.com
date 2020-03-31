@@ -1,18 +1,23 @@
 <template>
   <div class="ladingPage">
     <b-row >
-      <b-col sm="12" style="margin-bottom: -7px">
-        <div class="video_div">
+      <b-col sm="12" style="margin-bottom: -7px;">
+        <div class="video_div" style="background: url('static/imgs/landing.PNG');background-repeat: no-repeat;background-size: cover">
           <video ref="videoRef" class="video-player" loop autoplay muted src="/static/imgs/Urpixpays-4notext.mp4">
           </video>
           <div class="title"  data-aos="fade-up">
-            <div>
-              <h1>SUBMIT YOUR PHOTOS AND WIN CASH!</h1>
-              <h3>You will love taking photos like never before.</h3>
-              <b-button variant="outline-light" >Join Now</b-button>
+            <div style="font-family: Impact, Charcoal, sans-serif;color: #f2f2f2;">
+              <h1 style="color: #f2f2f2">SUBMIT YOUR PHOTOS AND WIN CASH!</h1>
+              <h4>You will love taking photos like never before</h4>
+              <b-button variant="outline-light" style="font-family: 'Roboto', sans-serif">Join Now</b-button>
             </div>
           </div>
         </div>
+      </b-col>
+      <b-col sm="12" class="Intro_div">
+         <p style="font-size: ">
+           Who We are?
+         </p>
       </b-col>
       <b-col sm="6">
         <div class="video_div">
@@ -73,5 +78,9 @@
 <style scoped>
   .col-sm-6{
     padding: 0!important;
+  }
+  .Intro_div{
+    height: 300px;
+    background: black;
   }
 </style>

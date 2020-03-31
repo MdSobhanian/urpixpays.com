@@ -17,8 +17,8 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto login_menu">
           <div>
-            <b-button variant=" log-btn" style="width: 95px;margin-right: 10px;">SIGN IN</b-button>
-            <b-button variant=" log-btn" style="width: 95px;">SIGN UP</b-button>
+            <b-button variant=" log-btn" style="width: 95px;margin-right: 10px;font-size: 14px;">SIGN IN</b-button>
+            <b-button variant=" log-btn" style="width: 95px;font-size: 14px;">SIGN UP</b-button>
           </div>
         </b-navbar-nav>
       </b-collapse>
@@ -43,5 +43,7 @@
 </script>
 
 <style >
-
+.main_menu{
+  font-size: 14px;
+}
 </style>

@@ -37,7 +37,7 @@
       </div>
       <div class="c_handle">
         <div class="c_handle_item" v-if="status=='open'">
-          <meter-pan :total="10" :val="5"></meter-pan>
+          <meter-pan :total="60" :val="50"></meter-pan>
           <div class="pin_div">
             <vs-avatar size="45px" src="https://urpixpays.com/public/img/wand_my.gif"/>
             <div class="pin_title1" style="display: table-cell;vertical-align: middle">
@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="c_handle_item" v-if="status=='open'">
-          <meter-pan :total="10" :val="8"></meter-pan>
+          <meter-pan :total="80" :val="40"></meter-pan>
           <div class="pin_div">
             <vs-avatar size="45px" src="https://urpixpays.com/public/img/charge_btn.gif"/>
             <div class="pin_title1" style="display: table-cell;vertical-align: middle">

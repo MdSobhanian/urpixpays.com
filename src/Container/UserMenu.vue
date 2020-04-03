@@ -56,6 +56,9 @@
            console.log('login check1',self.user);
            firebase.firestore().collection('users').doc(user.uid).onSnapshot(doc => {
              self.user=doc.data();
+             if (doc.data().photoURL==undefined){
+               self.user.photoURL=''
+             }
              // console.log(self.user)
 
            })

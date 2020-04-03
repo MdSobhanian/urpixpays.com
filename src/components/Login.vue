@@ -60,8 +60,9 @@
         loginUser: {
           email: "",
           name:"",
-          birthday:"",
-          photoURL:''
+          // birthday:"",
+          photoURL:'',
+          created_at:''
         },
       };
     },
@@ -78,12 +79,14 @@
           var token = result.credential.accessToken;
           // The signed-in user info.
           var user = result.user
-          console.log('testing',user.photoURL)
           var profile=result.additionalUserInfo.profile
+          console.log('testing',profile)
+
           self.loginUser.name=profile.name;
           self.loginUser.email=profile.email;
-          self.loginUser.birthday=profile.birthday;
+          // self.loginUser.birthday=profile.birthday;
           self.loginUser.photoURL=user.photoURL;
+          self.loginUser.uid=user.uid
           console.log(self.loginUser)
           firebase.firestore().collection('users').doc(user.uid).set(self.loginUser, { merge: true }).then((res)=>{
             console.log(res)

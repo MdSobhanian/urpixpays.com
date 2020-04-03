@@ -6,6 +6,8 @@ import GuestHome from '@/Pages/Guest/Home'
 import InfoPage from '@/Pages/Guest/InfoPage'
 import BestImage from '@/Pages/Guest/BestImage'
 import Gallery from '@/Pages/Guest/Gallery'
+import Dashboard from '@/Pages/Dashboard'
+import Home from '@/Pages/Home'
 
 Vue.use(Router)
 
@@ -15,6 +17,7 @@ export default new Router({
       path: '/',
       name: 'Container',
       component: Container,
+      redirect:'/landing',
       children:[
         {
           path: '/landing',
@@ -33,8 +36,18 @@ export default new Router({
         },
         {
           path: '/gallery',
-          name: 'BestImage',
+          name: 'Gallery',
           component: Gallery
+        },
+        {
+          path: '/dashboard',
+          name: 'Dashboard',
+          component: Dashboard
+        },
+        {
+          path: '/home',
+          name: 'Home',
+          component: Home
         }
       ]
     },

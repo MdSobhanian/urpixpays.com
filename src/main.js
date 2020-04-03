@@ -15,6 +15,27 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 Vue.use(AOS)
+import * as firebase from "firebase";
+const firebaseConfig = {
+  apiKey: "AIzaSyAlW_Q0_x1qDSP-okh6fhPerGn3j6Sk1LU",
+  authDomain: "urpixpays2020.firebaseapp.com",
+  databaseURL: "https://urpixpays2020.firebaseio.com",
+  projectId: "urpixpays2020",
+  storageBucket: "urpixpays2020.appspot.com",
+  messagingSenderId: "415070639966",
+  appId: "1:415070639966:web:e115c5f66277eadd23e1cf",
+  measurementId: "G-6C0RDFRE31"
+};
+firebase.initializeApp(firebaseConfig);
+import store from "./store";
+firebase.auth().onAuthStateChanged(user => {
+  if (user){
+    store.dispatch("fetchUser", user);
+  }
+
+});
+import vueCountryRegionSelect from 'vue-country-region-select'
+Vue.use(vueCountryRegionSelect)
 /*Vue.config.productionTip = false
 import VTextMarquee from 'vue-text-marquee';
 Vue.use(VTextMarquee);
@@ -33,10 +54,14 @@ Vue.use(Vuesax, {
 })*/
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
+import vuesax from 'vuesax'
+import 'vuesax/dist/vuesax.css'
+Vue.use(vuesax)
 /* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
 })

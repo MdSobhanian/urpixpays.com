@@ -75,13 +75,13 @@
       this.dataset=[]
     },
     data(){
-      return{
+      return {
         gWidth:300,
         images,
         dataset:[],
         isGettingImg:false,
         sel_index:null,
-        setInterval:null
+        setInterval:null,
       }
     },
     methods:{

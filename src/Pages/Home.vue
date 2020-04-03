@@ -5,35 +5,32 @@
         <div>
           <vs-tabs alignment="fixed" :color="'#3c8bdd'">
             <vs-tab label="Current">
-              <open-challenge></open-challenge>
+              <my-challenge></my-challenge>
             </vs-tab>
             <vs-tab label="Past">
-              <div>
-                test
-              </div>
+              <past-challenges></past-challenges>
             </vs-tab>
           </vs-tabs>
         </div>
       </vs-tab>
       <vs-tab label="Open Challenges">
-        <div>
-          test
-        </div>
+        <open-challenge></open-challenge>
       </vs-tab>
       <vs-tab label="Closed Challenges">
-        <div>
-          test
-        </div>
+        <closed-challenge></closed-challenge>
       </vs-tab>
 
     </vs-tabs>
   </div>
 </template>
 <script>
-  import OpenChallenge from'../components/OpenChallenge'
+  import MyChallenge from'../components/MyChallenge/Index'
+  import PastChallenges from "../components/MyChallenge/PastChallenges";
+  import OpenChallenge from '../components/OpenChallenge/Index'
+  import ClosedChallenge from '../components/ClosedChallenge/Index'
   export default {
     components:{
-      OpenChallenge
+      MyChallenge,PastChallenges,OpenChallenge,ClosedChallenge
     },
     data() {
       return {

@@ -1,5 +1,5 @@
 <template>
-  <div class="current">
+  <div>
     <div class="allchargebtn1">
       <span>W</span>
     </div>

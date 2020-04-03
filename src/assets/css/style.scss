@@ -209,7 +209,7 @@
     .img_div {
       img {
         width: 100%;
-        border-radius: 10px;
+        //border-radius: 10px;
         border: 1px solid #b6b6b6;
         padding: 5px;
       }
@@ -318,7 +318,7 @@
     .img_div {
       img {
         width: 100%;
-        border-radius: 10px;
+        //border-radius: 10px;
         border: 1px solid #b6b6b6;
         padding: 5px;
       }
@@ -478,7 +478,10 @@ button:focus {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.38);
   }
 }
-
+.con-vs-card{
+  border-radius: 0!important;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.5)!important;
+}
 .current{
   .allchargebtn1{
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.38);
@@ -566,6 +569,205 @@ button:focus {
       }
     }
   }
+  .challenge_div{
+    transition: transform .3s;
+    .cardx {
+      .con-vs-card{
+        border-radius: 0;
+      }
+      .vs-card--content{
+        display: flex;
+        padding: 0;
+      }
+      .vs-card--header{
+        padding: 5px;
+        border-bottom: solid 1px #e8e8e8;
+      }
+      .main_img{
+        width: 150px;
+        height: 150px;
+        border: solid 4px #cdcdcd;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        .left_time{
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          color: #fff;
+          background-color: rgba(0, 0, 0, 0.81);
+          opacity: 0.9;
+          margin: 0px;
+          padding: 5px;
+        }
+      }
+      .c_handle{
+        padding: 10px 0 0 0;
+        display: flex;
+        .c_handle_item{
+          .vote_title{
+            text-align: center;
+            color: #555;
+            font-size: 28px;
+            font-weight: 600;
+            padding-top: 12px;
+          }
+          padding: 0 3px 0 3px;
+          .c_handle_pan{
+            width: 110px;
+            height: 55px;
+            background-position: center;
+            background-size: cover;
+            margin: 0 0 20px 0;
+          }
+          .c_handle_pan{
+            width: 110px;
+            height: 55px;
+            background-position: center;
+            background-size: contain;
+            margin: 0 0 20px 0;
+            background-repeat: no-repeat;
+            border-bottom: solid 1px #ededed;
+            position: relative;
+            .needle{
+              position: absolute;
+              width: 50px;
+              bottom: -5px;
+              right: 46%;
+              transition: .3s;
+
+              transform-origin: 45px 5px;
+            }
+          }
+        }
+        .pin_div{
+          width: 100%;
+          .vs-avatar--con-img{
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.38);
+          }
+          .pin_title1{
+            background: #efefef;
+            margin: 0;
+            position: absolute;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.38);
+            top: 48%;;
+            left: 45px;
+            padding: 6px 6px 6px 9px;;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            text-align: center;
+            width: 60px;
+          }
+        }
+      }
+    }
+    .c_imgs{
+      padding: 6px;
+      border-right: solid 1px #ededed;
+      .c_imgs_body{
+        display: flex;
+        .img{
+          //border-radius: 5px;
+          margin: 2px 2px 10px 2px;
+          width: 100px;
+          height: 100px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border: solid 1px #e8e8e8;
+          position: relative;
+          .vote_count{
+            position: absolute;
+            color: white;
+            bottom: 0;
+            left: 7px;
+            text-shadow: 0px 1px 7px #000;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  .challenge_div:hover{
+    transform: scale(1.02);
+  }
+  @media (max-width: 923px){
+    .challenge_div{
+      transition: transform .3s;
+      width: 350px;
+      .cardx {
+        .vs-card--content{
+          display: flex;
+          padding: 0;
+          flex-wrap: wrap;
+        }
+        .vs-card--header{
+          padding: 5px;
+          border-bottom: solid 1px #e8e8e8;
+        }
+        .main_img{
+          width: 428px;
+          height: 150px;
+          border: solid 4px #cdcdcd;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .c_handle{
+          padding: 0px 0 10px 0;
+          width: 428px;
+          justify-content: center;
+          display: flex;
+          .c_handle_item{
+            .vote_title{
+              text-align: center;
+              color: #555;
+              font-size: 28px;
+              font-weight: 600;
+              padding-top: 12px;
+            }
+            padding: 0 3px 0 3px;
+
+          }
+          .pin_div{
+            width: 100%;
+            .vs-avatar--con-img{
+              box-shadow: 0 0 10px 0 rgba(0,0,0,0.38);
+            }
+            .pin_title1{
+              width: 60px;
+              padding: 6px 6px 6px 9px;;
+              top: 48%;;
+              span{
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .c_imgs{
+        padding: 0 0 10px 1px;
+        border-right: 0;
+        border-bottom: solid 1px #ededed;
+        .c_imgs_body{
+          display: flex;
+          .img{
+            //border-radius: 5px;
+            margin: 1px 1px 10px 1px;
+            width: 85px;
+            height: 85px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: solid 1px #e8e8e8;
+          }
+        }
+      }
+    }
+  }
   @media (max-width: 617px) {
     .pin_div{
       width: 120px!important;
@@ -582,6 +784,10 @@ button:focus {
     }
   }
 }
+.vite_btn{
+  animation: splash1 infinite 4s;
+  font-weight: bold;
+}
 @keyframes splash {
   0% {
     background-color: white;
@@ -593,4 +799,22 @@ button:focus {
     background-color: #efeffa;
   }
 }
+@keyframes splash1 {
+  0% {
+    background-color: #fe736c;
+  }
+  25% {
+    background-color: #fffe43;
+  }
+  50% {
+    background-color: #23fd55;
+  }
+  75% {
+     background-color: #fffe43;
+   }
+  100% {
+    background-color: #fe736c;
+  }
+}
+
 

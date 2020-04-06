@@ -817,4 +817,36 @@ button:focus {
   }
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px
+}
+::-webkit-scrollbar-button {
+  background: #ccc
+}
+::-webkit-scrollbar-track-piece {
+  background: #888
+}
+::-webkit-scrollbar-thumb {
+  background: #eee
+}
+.user_menu{
+  .navbar-menu{
+    display: flex;
+    width: 100%;
+    .main_menu{
+      flex: 1;
+      margin-top: 5px;
+    }
+
+  }
+  @media (max-width: 992px) {
+    .main_menu{
+      display: none;
+    }
+    .navbar-menu{
+      width: unset!important;
+    }
+  }
+}
 

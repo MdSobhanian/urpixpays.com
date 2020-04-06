@@ -56,6 +56,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import vuesax from 'vuesax'
 import 'vuesax/dist/vuesax.css'
+import 'material-icons/iconfont/material-icons.css';
 Vue.use(vuesax)
 /* eslint-disable no-new */
 

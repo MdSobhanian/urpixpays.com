@@ -19,6 +19,8 @@
           <b-button v-b-modal.login variant=" log-btn" style="width: 95px;margin-right: 10px;font-size: 14px;">SIGN IN
           </b-button>
           <b-button v-b-modal.register variant=" log-btn" style="width: 95px;font-size: 14px;">SIGN UP</b-button>
+
+
         </div>
 
         <b-modal id="login" size="sm" centered hide-header hide-footer>
@@ -35,10 +37,10 @@
   import firebase from 'firebase'
   import Login from "../components/Login";
   import Register from "../components/Register";
-
+  import SideBar from './SideBar'
   export default {
     components: {
-      Login, Register
+      Login, Register,SideBar
     },
     data() {
       return {

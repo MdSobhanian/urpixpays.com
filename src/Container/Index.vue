@@ -2,7 +2,7 @@
   <div>
     <navbar></navbar>
     <div style="min-height: 80vh;">
-      <router-view>
+      <router-view key="$route.fullPath">
       </router-view>
     </div>
     <Footer></Footer>

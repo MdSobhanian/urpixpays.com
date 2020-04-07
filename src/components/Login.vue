@@ -110,6 +110,7 @@
         });
       },
       submit() {
+        Event.$emit('isLoad',true)
         firebase
           .auth()
           .signInWithEmailAndPassword(this.form.email, this.form.password)
@@ -119,6 +120,7 @@
               this.error1 = "Your account does not verified yet."
               return
             }
+            Event.$emit('isLoad',false)
             firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get()
               .then(doc => {
                 if (doc.empty) {

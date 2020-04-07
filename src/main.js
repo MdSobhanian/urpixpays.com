@@ -56,9 +56,12 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import vuesax from 'vuesax'
 import 'vuesax/dist/vuesax.css'
+import 'material-icons/iconfont/material-icons.css';
 Vue.use(vuesax)
+import Loader from "./components/Loader";
+Vue.component('loader',Loader)
 /* eslint-disable no-new */
-
+window.Event = new Vue();
 new Vue({
   el: '#app',
   router,

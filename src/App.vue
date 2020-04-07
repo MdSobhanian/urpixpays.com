@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <!--<img src="./assets/logo.png">-->
-    <router-view :key="$route.fullPath"/>
+<!--    <router-view :key="$route.fullPath"/>-->
+    <loader></loader>
+    <router-view />
+
   </div>
 </template>
 

@@ -247,7 +247,7 @@
       font-size: 9vw;
     }
     .ladingPage .video_div .title div h4 {
-      font-size: 5vw;
+      font-size: 5vw ;
     }
   }
 </style>

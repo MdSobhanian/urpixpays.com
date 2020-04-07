@@ -120,14 +120,16 @@
 .ladingPage {
   .col-sm-12 {
     padding: 0;
+    margin:0!important;
+    height: calc(100vh - 70px);
   }
 
   //width: 100%;overflow: hidden;
   .video_div {
     position: relative;
     width: 100%;
-    width: 100%;
-
+    overflow: hidden;
+    height: 100%;
     video {
       width: 100%;
       justify-content: center;

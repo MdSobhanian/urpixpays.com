@@ -118,8 +118,18 @@
 }
 
 .ladingPage {
+  .about-us{
+    //height: 100vh;
+    padding: 0 20px;
+    overflow-y: scroll;
+    .cardx{
+      width: 285px;
+      height: 410px;
+      margin: 0 auto 20px auto;
+    }
+  }
   .col-sm-12 {
-    padding: 0;
+    //padding: 0;
     margin:0!important;
     height: calc(100vh - 70px);
   }
@@ -129,9 +139,9 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 100%;
+    //height: 100vh;
     video {
-      width: 100%;
+      height: 100vh;
       justify-content: center;
     }
 

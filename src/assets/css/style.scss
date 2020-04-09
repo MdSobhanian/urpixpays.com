@@ -212,7 +212,8 @@
 
 .best-image-div {
   margin-top: 20px;
-
+  height: calc(100vh - 150px);
+  overflow-y: auto;
   .stack-item {
     .img_div:hover {
       animation: imgZoom 1s;
@@ -581,8 +582,14 @@ button:focus {
       }
     }
   }
+  @keyframes zoomedIn {
+    from {margin-top: 200px;}
+    to {margin-top: 0}
+  }
   .challenge_div{
     transition: transform .3s;
+    animation-name: zoomedIn;
+    animation-duration: 0.5s;
     .cardx {
       .con-vs-card{
         border-radius: 0;
@@ -630,13 +637,6 @@ button:focus {
             width: 110px;
             height: 55px;
             background-position: center;
-            background-size: cover;
-            margin: 0 0 20px 0;
-          }
-          .c_handle_pan{
-            width: 110px;
-            height: 55px;
-            background-position: center;
             background-size: contain;
             margin: 0 0 20px 0;
             background-repeat: no-repeat;
@@ -648,7 +648,6 @@ button:focus {
               bottom: -5px;
               right: 46%;
               transition: .3s;
-
               transform-origin: 45px 5px;
             }
           }
@@ -862,3 +861,7 @@ button:focus {
   }
 }
 
+.vs-popup--content{
+  padding: 0;
+  margin: 0;
+}

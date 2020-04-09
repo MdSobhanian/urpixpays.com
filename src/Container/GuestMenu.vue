@@ -47,7 +47,7 @@
         user: ''
       }
     },
-    created() {
+    mounted() {
       let self=this
       firebase.auth().onAuthStateChanged(user => {
         if (user){
@@ -56,11 +56,11 @@
           // console.log('login check1',this.user);
           switch (this.$router.currentRoute.name) {
             case 'GuestHome':
-            /*case 'InfoPage':
-            case 'Gallery':
-            case 'BestImage':*/
+              /*case 'InfoPage':
+              case 'Gallery':
+              case 'BestImage':*/
               //console.log('1', this.$router.currentRoute.name)
-              this.$router.push({name:'Home'})
+              //this.$router.push({name:'Home'})
               break;
             default:
               //console.log('2',this.$router.currentRoute.name)
@@ -82,7 +82,49 @@
               break;
             default:
               // console.log('2',this.$router.currentRoute.name)
-              this.$router.push({name:'GuestHome'})
+              //self.$router.push({name:'GuestHome'})
+              break;
+
+          }
+        }
+      });
+    },
+    created() {
+      let self=this
+      firebase.auth().onAuthStateChanged(user => {
+        if (user){
+          //this.displayName=user.displayName;
+          self.user =user;
+          // console.log('login check1',this.user);
+          switch (this.$router.currentRoute.name) {
+            case 'GuestHome':
+            /*case 'InfoPage':
+            case 'Gallery':
+            case 'BestImage':*/
+              //console.log('1', this.$router.currentRoute.name)
+              //this.$router.push({name:'Home'})
+              break;
+            default:
+              //console.log('2',this.$router.currentRoute.name)
+              //this.$router.push({name:'GuestHome'})
+              break;
+          }
+
+        }else{
+          /*this.$router.replace({
+            name: "Login"
+          });*/
+          //console.log('login check2',user);
+          switch (this.$router.currentRoute.name) {
+            case 'GuestHome':
+            case 'InfoPage':
+            case 'Gallery':
+            case 'BestImage':
+              //console.log('1',this.$router.currentRoute.name)
+              break;
+            default:
+              // console.log('2',this.$router.currentRoute.name)
+              self.$router.push({name:'GuestHome'})
               break;
 
           }

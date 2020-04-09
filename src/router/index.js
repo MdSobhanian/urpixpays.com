@@ -8,6 +8,7 @@ import BestImage from '@/Pages/Guest/BestImage'
 import Gallery from '@/Pages/Guest/Gallery'
 import Dashboard from '@/Pages/Dashboard'
 import Home from '@/Pages/Home'
+import ChallengeDetail from '@/Pages/ChallengeDetail'
 
 Vue.use(Router)
 
@@ -48,7 +49,13 @@ export default new Router({
           path: '/home',
           name: 'Home',
           component: Home
-        }
+        },
+        {
+          path: '/challenge-detail/:id',
+          name: 'ChallengeDetail',
+          component: ChallengeDetail
+        },
+
       ]
     },
 

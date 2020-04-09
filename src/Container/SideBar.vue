@@ -13,16 +13,16 @@
 <!--        <vs-sidebar-item index="1" icon="menu" @click="reduce=!reduce">-->
 <!--          Toggle Sidebar-->
 <!--        </vs-sidebar-item>-->
-        <vs-sidebar-item index="2" icon="schedule" v-bind:to="'home'" @click="setActive(false)">
+        <vs-sidebar-item index="2" icon="schedule" v-bind:to="'/home'" @click="setActive(false)">
           Challenge
         </vs-sidebar-item>
-        <vs-sidebar-item index="3" icon="shop" v-bind:to="'best_images'" @click="setActive(false)">
+        <vs-sidebar-item index="3" icon="shop" v-bind:to="'/best_images'" @click="setActive(false)">
           Best Images
         </vs-sidebar-item>
-        <vs-sidebar-item index="4" icon="description" v-bind:to="'info-page'" @click="setActive(false)">
+        <vs-sidebar-item index="4" icon="description" v-bind:to="'/info-page'" @click="setActive(false)">
           Info Page
         </vs-sidebar-item>
-        <vs-sidebar-item index="5" icon="perm_media" v-bind:to="'gallery'" @click="setActive(false)">
+        <vs-sidebar-item index="5" icon="perm_media" v-bind:to="'/gallery'" @click="setActive(false)">
           Gallery
         </vs-sidebar-item>
         <div class="vs-sidebar--item" ><a href="https://urblogpost.com/" target="_blank"><i class="fas fa-blog"></i>

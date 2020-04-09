@@ -94,6 +94,7 @@
             console.log(err)
           })
           console.log('from facebook',result)
+          self.$router.push('/home');
           // self.$router.push({name:'Dashboard'})
           // ...
         }).catch(function(error) {
@@ -111,15 +112,16 @@
       },
       submit() {
         // Event.$emit('isLoad',true)
+        let self=this
         firebase
           .auth()
           .signInWithEmailAndPassword(this.form.email, this.form.password)
           .then(data => {
             console.log(firebase.auth().currentUser)
-            if (firebase.auth().currentUser.emailVerified==false){
+            /*if (firebase.auth().currentUser.emailVerified==false){
               this.error1 = "Your account does not verified yet."
               return
-            }
+            }*/
             Event.$emit('isLoad',false)
             firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get()
               .then(doc => {
@@ -136,7 +138,7 @@
                   .then(() => {
                   });*/
 
-                this.$router.replace({name: "Dashboard"});
+                self.$router.push('/home');
 
               })
               .catch(err => {

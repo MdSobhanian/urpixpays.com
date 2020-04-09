@@ -3,10 +3,10 @@
     <b-navbar-brand href="#"><img src="/static/imgs/Logo-Horizontal-Small.gif" alt="this slowpoke moves" width=150/></b-navbar-brand>
     <div class="navbar-menu">
       <b-navbar-nav class="main_menu">
-        <b-nav-item v-bind:to="'home'">Challenge</b-nav-item>
-        <b-nav-item v-bind:to="'best_images'">BEST IMAGES</b-nav-item>
-        <b-nav-item v-bind:to="'info-page'">INFO PAGE</b-nav-item>
-        <b-nav-item v-bind:to="'gallery'">GALLERY</b-nav-item>
+        <b-nav-item v-bind:to="'/home'">Challenge</b-nav-item>
+        <b-nav-item v-bind:to="'/best_images'">BEST IMAGES</b-nav-item>
+        <b-nav-item v-bind:to="'/info-page'">INFO PAGE</b-nav-item>
+        <b-nav-item v-bind:to="'/gallery'">GALLERY</b-nav-item>
         <b-nav-item href="https://urblogpost.com/" target="_blank">BLOG</b-nav-item>
       </b-navbar-nav>
 
@@ -66,7 +66,7 @@
             /*case 'Gallery':
             case 'BestImage':*/
               //console.log('1',this.$router.currentRoute.name)
-              this.$router.push({name:'Home'})
+              //this.$router.push({name:'Home'})
               break;
             default:
               //console.log('2',this.$router.currentRoute.name)
@@ -86,7 +86,7 @@
               break;
             default:
               //console.log('2',this.$router.currentRoute.name)
-              this.$router.push({name:'GuestHome'})
+              //this.$router.push({name:'GuestHome'})
               break;
 
           }

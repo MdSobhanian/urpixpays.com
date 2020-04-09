@@ -1,6 +1,6 @@
 <template>
   <div class="navar-container" >
-    <guest-menu v-if="!isMenu"></guest-menu>
+    <guest-menu v-if="!isMenu" :key="$route.path"></guest-menu>
     <user-menu v-else></user-menu>
   </div>
 </template>

@@ -32,6 +32,7 @@
 <script>
   import firebase from 'firebase'
   import SideBar from './SideBar'
+  import store from "../store";
   export default {
     components:{SideBar},
     data() {

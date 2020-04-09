@@ -110,7 +110,7 @@
         });
       },
       submit() {
-        Event.$emit('isLoad',true)
+        // Event.$emit('isLoad',true)
         firebase
           .auth()
           .signInWithEmailAndPassword(this.form.email, this.form.password)

@@ -158,7 +158,7 @@
     methods: {}
   }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 
 
 
@@ -184,40 +184,6 @@
     vertical-align: middle;
   }
 
-  .about-us-cell {
-    width: 90%;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    margin: auto;
-    padding: 24px;
-    min-width: 250px;
-    max-width: 280px;
-    min-height: 280px;
-    margin-bottom: 50px;
-    font-size: 13px;
-    background: #f0f0f0;
-  }
-
-  .about-us-cell p {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .about-us-cell p::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #2c3e50;
-    opacity: 0.8;
-    transition: width .3s;
-  }
-
-  .about-us-cell p:hover::after {
-    width: 80%;
-  / / transition: width .3 s;
-    margin: auto;
-  }
 
   .hover-title {
     height: 70px;

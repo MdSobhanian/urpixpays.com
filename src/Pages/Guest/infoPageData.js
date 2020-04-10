@@ -1,11 +1,5 @@
 export default [
   {
-    url:'/static/imgs/InfoPage/ip1.jpg',
-    content:'URPIXPAYS.COM ‘‘TURN YOUR PHOTOS INTO CASH!’’',
-    title:'JOIN PHOTOGRAPHY CHALLENGES TO EARN CASH REWARDS!',
-    direction:'right'
-  },
-  {
     url:'/static/imgs/InfoPage/ip2.png',
     content:'Urpixpays.com was born out of the passion to make photography exciting and fun while rewarding photographers and giving them a sense of community. We are a group of photography enthusiasts and we invest a lot of time in our community. We would not only like to provide a financial opportunity to photographers around the world but also a platform so they could share their passion and earn a few dollars. We have come together to create a fun and safe environment to empower photographers and to built a unique photography community that fosters collaboration and rewards creativity.',
     title:'WHAT IS URPIXPAYS?',
@@ -49,7 +43,7 @@ export default [
   },
   {
     url:'/static/imgs/InfoPage/ip8.jpg',
-    content:'',
+    content:'To encourage our photographers, we are offering cash prizes to those who rise above all obstacles and produce the best photo. Everyone has a taste so we have developed various challenges (i.e. Free Challenges, Paid Challenges, or Game of Flip Challenges) with many themes, so find the best challenge that suits you, or you can try them all.',
     title:'CHALLENGES',
     direction:'left'
   },

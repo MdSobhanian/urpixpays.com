@@ -1,38 +1,14 @@
 <template>
   <div class="infoPage">
-    <div v-for="(item,index) in dataList" :class="index%2==1?'invert':''">
-      <b-row >
-        <b-col sm="6">
-          <div class="title" data-aos="fade-right">
-            <div class="font1">
-              <h3>{{item.title}}</h3>
-              <h6>{{item.content}}</h6>
-            </div>
-          </div>
-        </b-col>
-        <b-col sm="6">
-          <div class="video_div" data-aos="fade-left">
+    <b-row >
+        <b-col lg="6" v-for="(item,index) in dataList" style="margin-bottom: 20px;">
+          <div class="title text-content" data-aos="fade-right">
+            <h3>{{item.title}}</h3>
             <img v-bind:src="item.url" width="100%">
+            <h6>{{item.content}}</h6>
           </div>
         </b-col>
-      </b-row>
-      <!--<b-row v-else class="invert">
-        <b-col sm="6">
-          <div class="video_div" data-aos="fade-right">
-            <img :src="item.url" width="100%">
-          </div>
-        </b-col>
-        <b-col sm="6">
-          <div class="title" data-aos="fade-left">
-            <div class="font1">
-              <h3>{{item.title}}</h3>
-              <h6>{{item.content}}</h6>
-            </div>
-          </div>
-        </b-col>
-      </b-row>-->
-    </div>
-
+    </b-row>
   </div>
 
 </template>
@@ -96,5 +72,36 @@
 <style scoped>
   .col-sm-6 {
     padding: 0 !important;
+  }
+  .infoPage{
+    padding-bottom: 20px;
+  }
+  .text-content{
+    border:1px solid lightgray;
+    margin-top: 20px;
+    padding: 20px;
+    float: left;
+    border-radius: 5px;
+    border-bottom: 3px solid #3c95ac;
+    box-shadow: 0 4px 15px 0 rgba(0,0,0,0.5) !important;
+  }
+  .text-content h3{
+    font-size: 17px;
+    text-align: left;
+    font-weight: 600;
+    color: #3c95ac;
+  }
+  .text-content h6{
+    text-align: left;
+  }
+  .text-content img{
+    width: 30%;
+    float: left;
+    margin-right: 10px;
+  }
+  @media screen and (max-width: 576px) {
+    .text-content h3{
+      font-size: 4vw;
+    }
   }
 </style>

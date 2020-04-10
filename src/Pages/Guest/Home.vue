@@ -27,7 +27,7 @@
               </h3>
             </div>
             <div slot="media">
-              <img src="https://urpixpays.com/public/uploads/info_images/1568270945Invite_Friends_Urpixpays_optimized.jpg">
+              <img src="/static/imgs/landing/21.PNG" height="180px;">
             </div>
             <div>
               <span>URPIXPAYS was created by a group of passionate photographers. The goal behind its creation has always been
@@ -44,7 +44,7 @@
               </h3>
             </div>
             <div slot="media">
-              <img src="https://urpixpays.com/public/uploads/info_images/1568270945Invite_Friends_Urpixpays_optimized.jpg">
+              <img src="/static/imgs/landing/mission.PNG" height="180px;">
             </div>
             <div>
               <span>To help people show the world their photo taking talent.To provide skillful photographers with a platform on

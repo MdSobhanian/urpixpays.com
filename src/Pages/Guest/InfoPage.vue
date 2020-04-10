@@ -59,7 +59,7 @@
         if (dataLength===infoPageData.length)return;
         console.log(dataLength)
         for (let index=0;index<infoPageData.length;index++){
-          if (index>=dataLength && index<=dataLength+2){
+          if (index>=dataLength && index<=dataLength+5){
             this.dataList.push(infoPageData[index])
           }
         }

@@ -54,7 +54,7 @@ export default [
     direction:'right'
   },
   {
-    url:'/static/imgs/InfoPage/ip11.gif',
+    url:'/static/imgs/InfoPage/paid.jpg',
     content:'Members can join Paid Challenges by paying a fee from their wallet or credit/debit card. Members can use the charge function to move their photo(s) to the top of the voting page and increase their exposure and number of votes earned.',
     title:'PAID CHALLENGE:',
     direction:'left'
@@ -67,13 +67,13 @@ export default [
   },
   {
     url:'/static/imgs/InfoPage/ip12.jpg',
-    content:'',
+    content:'To make each challenge more exciting, you can use various functions (i.e. Flip, Charge, and Wand). These functions can aid you win challenges, by increasing your photos’ visibility, or changing photo to a different one that may earn you more votes. These functions are given to members for free when they register at UrPixPays.com, when actively participating in voting, or if you are ranked 5-100 in challenges. They can also be purchased using your “wallet” option.',
     title:'FUNCTIONS:',
     direction:'left'
   },
   {
     url:'/static/imgs/InfoPage/ip13.gif',
-    content:'',
+    content:'You can use the “Charge” option to make your photos more visible during a challenge on the voting page. The “Charge” option moves your photos to the top of other submissions. The power of charge stays for 24 hours. You can use Charges as many times as you wish.',
     title:'CHARGE:',
     direction:'right'
   },

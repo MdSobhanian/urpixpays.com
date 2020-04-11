@@ -5,43 +5,43 @@
         <div class="media" style="background-image: url('https://urpixpays.com/public/uploads/challengesimages/439dragonfly-1122445_1920.jpg')">
           <span>test</span>
         </div>
-
       </div>
     </vs-card>
     <vs-tabs alignment="center">
       <vs-tab label="Detail">
-        <div>
-          Detail
-        </div>
+        <detail></detail>
       </vs-tab>
       <vs-tab label="Prize">
-        <div>
-          Prize
-        </div>
+        <price></price>
       </vs-tab>
       <vs-tab label="Top Photos">
-        <div>
-          Top Photos
-        </div>
+        <top-photos></top-photos>
       </vs-tab>
       <vs-tab label="Rank">
-        <div>
-          Rank
-        </div>
+        <rank></rank>
       </vs-tab>
       <vs-tab label="Invite">
-        <div>
-          Invite
-        </div>
+        <invite></invite>
       </vs-tab>
     </vs-tabs>
-
     Challege Page{{$route.params.id}}
   </div>
 </template>
 <script>
-  export default {
+  import Rank from "../components/ChallengeDetail/Rank";
+  import Invite from "../components/ChallengeDetail/Invite";
+  import Price from "../components/ChallengeDetail/Price";
+  import TopPhotos from "../components/ChallengeDetail/Topphotos";
+  import Detail from "../components/ChallengeDetail/Detail";
 
+  export default {
+    components:{
+      Detail,
+      Invite,
+      Price,
+      Rank,
+      TopPhotos
+    }
   }
 </script>
 <style lang="scss">

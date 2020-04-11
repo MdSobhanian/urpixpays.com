@@ -155,44 +155,6 @@
         </div>
       </b-col>
     </b-row>
-
-    <!--<div>
-      <b-row>
-        <b-col sm="6">
-          <div class="video_div">
-            <img src="/static/imgs/left.jpg" width="100%">
-            <div class="title overlay"></div>
-            <div class="title" data-aos="fade-right" style="width: 100%;">
-              <div class="font1">
-                Participate in challenges. Learn from the best photographers around the world and earn money.
-              </div>
-            </div>
-          </div>
-        </b-col>
-        <b-col sm="6">
-          <div class="video_div" style="width: 100%;">
-            <img src="/static/imgs/rightt.jpg" width="100%;">
-            <div class="title overlay"></div>
-            <div class="title" data-aos="fade-left" style="width: 100%;overflow:hidden">
-              <div class="font1">
-                It doesn’t matter whether you are a professional or amateur photographer, or just starting out. If you
-                take good photos, then money can be on its way to your pocket.
-              </div>
-            </div>
-          </div>
-        </b-col>
-      </b-row>
-    </div>-->
-    <!--<div style="height: 100vh;">
-      <div class="video_div">
-        <img src="/static/imgs/bottom.jpg" width="100%">
-        <div class="title overlay"></div>
-        <div class="title" data-aos="fade-down">
-          <div class="font1">
-          </div>
-        </div>
-      </div>
-    </div>-->
   </div>
 
 </template>

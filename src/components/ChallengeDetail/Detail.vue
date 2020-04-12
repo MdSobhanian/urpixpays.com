@@ -6,7 +6,7 @@
       </div>
 
       <b-col md="9" class="content">
-        <p class="text-content">We <strong>photographers</strong> love to take photographs.<br> It is hard to select a particular or favorite one form the big collections we have. But for this challenge, you have to choose 4 of your best photos to win the challenge. Wish you all the best! Rules:<br> 1. Both black and white are allowed. 2. Please do not include names and watermarks on photos. 3. Do not submit the same photos. 4. No adults or nudity. 5. You must be the owner and have to provide proof of your ownership to get rewards. 6. Must be 18 years old to participate. 7. Photo counts: 4</p>
+        <p class="text-content">We <strong>photographers</strong> love to take photographs.<br> It is hard to select a particular or favorite one form the big collections we have. <br>But for this challenge, you have to choose 4 of your best photos to win the challenge.<br>Wish you all the best!<br><strong>Rules:</strong><br> 1. Both black and white are allowed. <br>2. Please do not include names and watermarks on photos. <br>3. Do not submit the same photos. <br>4. No adults or nudity. <br>5. You must be the owner and have to provide proof of your ownership to get rewards. <br>6. Must be 18 years old to participate. <br>7. Photo counts: 4</p>
       </b-col>
       <b-col md="3" class="profile">
         <div class="profile-img-container">

@@ -23,20 +23,20 @@
             <div class="img-body">
               <div class="title">
                 <div class="title-item left">
-                  <span><i class="fas fa-vote-yea"></i></span><label style="margin-left: 5px;">29239</label>
+                  <span><i class="fas fa-vote-yea item-hover"></i></span><label style="margin-left: 5px;">29239</label>
                 </div>
                 <div class="title-item right">
-                  <b-icon icon="exclamation-octagon" scale="1.1" style="text-shadow: 0 0 3px #000000, 0 0 5px #000000;"></b-icon>
+                  <b-icon class="item-hover" icon="exclamation-octagon" scale="1.1" style="color:white; text-shadow: 0 0 3px #000000, 0 0 5px #000000;"></b-icon>
                 </div>
               </div>
               <div class="title-item-top left">
-                <b-icon icon="heart" scale="1.1" style="color: white;text-shadow: 0 0 3px #000000, 0 0 5px #000000;"></b-icon>
+                <b-icon class="item-hover" icon="heart" scale="1.1" style="color: white; text-shadow: 0 0 3px #000000, 0 0 5px #000000;"></b-icon>
               </div>
               <div class="title-item-top center">
                 #{{index+1}}
               </div>
               <div @click="sel_index = index" class="title-item-top right">
-                <b-icon icon="search" scale="1.1" style="color: white; text-shadow: 0 0 3px #000000, 0 0 5px #000000;"></b-icon>
+                <b-icon class="item-hover" icon="search" scale="1.1" style="color: white; text-shadow: 0 0 3px #000000, 0 0 5px #000000;"></b-icon>
               </div>
               <div class="center-profile">
                 <div class="center-container">
@@ -44,7 +44,6 @@
                       URPIXPAYS.COM
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -202,5 +201,8 @@
     background-position: center;
     border: 2px solid white;
     box-shadow: 0 0 15px 0 rgba(109,124,158,0.98);
+  }
+  .item-hover{
+    cursor: pointer;
   }
 </style>

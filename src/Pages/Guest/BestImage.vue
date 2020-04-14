@@ -6,7 +6,6 @@
       :disable-scroll="true"
       @close="sel_index = null"
     />
-
     <StackGrid
       :columnWidth="gWidth"
       :gutterX="15"

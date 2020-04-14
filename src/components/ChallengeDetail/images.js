@@ -300,5 +300,4 @@ export default
     title:'test',
     link:'https://www.instagram.com/elaopatowiecka/'
   },
-
 ]

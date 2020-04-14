@@ -1,9 +1,13 @@
 <template>
   <div class="challenge-detail">
-    <vs-card actionable class="cardx">
+    <vs-card class="cardx">
       <div slot="media">
         <div class="media" style="background-image: url('https://urpixpays.com/public/uploads/challengesimages/439dragonfly-1122445_1920.jpg')">
-          <span>test</span>
+          <div class="challenge-title-container">
+              <div class="challenge-title">
+                <div class="challenge-name">Your Best Shots!</div>
+              </div>
+          </div>
         </div>
       </div>
     </vs-card>
@@ -24,16 +28,15 @@
         <invite></invite>
       </vs-tab>
     </vs-tabs>
-    Challege Page{{$route.params.id}}
+    Challenge Page{{$route.params.id}}
   </div>
 </template>
 <script>
-  import Rank from "../components/ChallengeDetail/Rank";
   import Invite from "../components/ChallengeDetail/Invite";
   import Price from "../components/ChallengeDetail/Price";
   import TopPhotos from "../components/ChallengeDetail/Topphotos";
   import Detail from "../components/ChallengeDetail/Detail";
-
+  import Rank from "../components/ChallengeDetail/Rank";
   export default {
     components:{
       Detail,
@@ -66,5 +69,24 @@
       padding: 5px;
       height: 100%;
     }
+  }
+  .challenge-title-container{
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
+    border: 8px solid rgba(255,255,255,0.7);
+    margin: auto;
+    display: table;
+  }
+  .challenge-title{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .challenge-name{
+    width: 300px;
+    height: 70px;
+    font-size: 35px;
+    color: white;
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+    margin: auto;
   }
 </style>

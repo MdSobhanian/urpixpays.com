@@ -28,10 +28,10 @@
         <div class="bottom-container">
           <b-row>
             <b-col class="name" sm="6">
-                {{item.name}}
+              {{item.name}}
             </b-col>
             <b-col class="country" sm="6">
-                {{item.country}}
+              {{item.country}}
             </b-col>
           </b-row>
         </div>
@@ -40,15 +40,11 @@
   </div>
 </template>
 <script>
-  import rank from './rank'
-  import images from "./images";
+  import rankimage from './rankimages'
   export default {
     name: 'Rank',
-    props: {
-
-    },
     created() {
-      console.log(rank)
+      console.log(rankimage)
       this.showMore()
       window.addEventListener('scroll', this.handleScroll);
       this.setInterval=setInterval(this.orderImgs,500);
@@ -63,7 +59,7 @@
     data(){
       return{
         gWidth:300,
-        rank,
+        rankimage,
         dataset:[],
         isGettingImg:false,
         sel_index:null,
@@ -73,13 +69,13 @@
     methods:{
       showMore(){
         let dataLength=this.dataset.length
-        console.log(this.dataset.length,rank.length)
-        if (dataLength===rank.length || this.isGettingImg)return;
+        console.log(this.dataset.length,rankimage.length)
+        if (dataLength===rankimage.length || this.isGettingImg)return;
         this.isGettingImg=true
         console.log(dataLength)
-        for (let index=0;index<rank.length;index++){
+        for (let index=0;index<rankimage.length;index++){
           if (index>=dataLength && index<=dataLength+5){
-            this.dataset.push(rank[index])
+            this.dataset.push(rankimage[index])
           }
         }
         this.orderImgs()
@@ -147,7 +143,7 @@
     box-shadow: 0 0 15px 0 rgba(4, 53, 109, 0.98);
   }
   .rank{
-   background: white;
+    background: white;
     width: 60px;
     height: 60px;
     float:left;

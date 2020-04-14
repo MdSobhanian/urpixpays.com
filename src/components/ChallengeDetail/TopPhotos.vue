@@ -50,7 +50,6 @@
       </div>
     </StackGrid>
   </div>
-
 </template>
 <script>
   import StackGrid from 'vue-stack-grid-component'

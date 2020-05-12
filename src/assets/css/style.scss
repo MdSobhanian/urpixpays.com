@@ -605,11 +605,23 @@ button:focus {
       .main_img{
         width: 150px;
         height: 150px;
-        border: solid 4px #cdcdcd;
+        //border: solid 4px #cdcdcd;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
+        .challenge_detail{
+          color: white;
+          width: 200px;
+          background: rgba(0, 151, 255,0.8);
+          margin: auto;
+          padding: 5px;
+          font-size: 20px;
+          cursor: pointer;
+          border-radius: 3px;
+          //border: 0.5px solid white;
+          box-shadow: 0 3px 5px 0 rgba(0,0,0,0.9);
+        }
         .left_time{
           position: absolute;
           width: 100%;
@@ -619,6 +631,7 @@ button:focus {
           opacity: 0.9;
           margin: 0px;
           padding: 5px;
+          font-size: 17px;
         }
       }
       .c_handle{
@@ -638,7 +651,7 @@ button:focus {
             height: 55px;
             background-position: center;
             background-size: contain;
-            margin: 0 0 20px 0;
+            margin: 0 0 0px 0;
             background-repeat: no-repeat;
             border-bottom: solid 1px #ededed;
             position: relative;
@@ -720,16 +733,16 @@ button:focus {
           border-bottom: solid 1px #e8e8e8;
         }
         .main_img{
-          width: 428px;
-          height: 150px;
-          border: solid 4px #cdcdcd;
+          width: 350px;
+          height: 250px;
+          //border: solid 4px #cdcdcd;
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
         }
         .c_handle{
           padding: 0px 0 10px 0;
-          width: 428px;
+          width: 350px;
           justify-content: center;
           display: flex;
           .c_handle_item{
@@ -740,7 +753,7 @@ button:focus {
               font-weight: 600;
               padding-top: 12px;
             }
-            padding: 0 3px 0 3px;
+            padding: 10px 3px 0 3px;
 
           }
           .pin_div{
@@ -750,10 +763,14 @@ button:focus {
             }
             .pin_title1{
               width: 60px;
-              padding: 6px 6px 6px 9px;;
-              top: 48%;;
+              padding: 4px 6px 4px 9px;;
+              top: 48%;
+              left:25px;
+              background: rgba(28, 157, 235, 0.8);
               span{
                 display: block;
+                font-weight: bold;
+                color: white;
               }
             }
           }
@@ -779,6 +796,86 @@ button:focus {
       }
     }
   }
+
+  @media (min-width: 923px){
+    .challenge_div{
+      transition: transform .3s;
+      width: 750px;
+      .cardx {
+        .vs-card--content{
+          display: flex;
+          padding: 0;
+          flex-wrap: wrap;
+        }
+        .vs-card--header{
+          padding: 5px;
+          border-bottom: solid 1px #e8e8e8;
+        }
+        .main_img{
+          width: 100%;
+          height: 300px;
+          //border: solid 4px #cdcdcd;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .c_handle{
+          width: 650px;
+          justify-content: center;
+          display: flex;
+          .c_handle_item{
+            .vote_title{
+              text-align: center;
+              color: #555;
+              font-size: 28px;
+              font-weight: 600;
+              padding-top: 12px;
+            }
+            padding: 20px 58px 0 157px;
+
+          }
+          .pin_div{
+            width: 100%;
+            .vs-avatar--con-img{
+              box-shadow: 0 0 10px 0 rgba(0,0,0,0.38);
+            }
+            .pin_title1{
+              width: 60px;
+              padding: 4px 6px 4px 9px;;
+              top: 48%;
+              left:25px;
+              animation: splash2 infinite 4s;
+              background: rgba(28, 157, 235, 0.8);
+              span{
+                display: block;
+                font-weight: bold;
+                //color: white;
+              }
+            }
+          }
+        }
+      }
+      .c_imgs{
+        padding: 0 0 10px 1px;
+        border-right: 0;
+        border-bottom: solid 1px #ededed;
+        .c_imgs_body{
+          display: flex;
+          .img{
+            //border-radius: 5px;
+            margin: 1px 1px 10px 1px;
+            width: 185px;
+            height: 185px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: solid 1px #e8e8e8;
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width: 617px) {
     .pin_div{
       width: 120px!important;
@@ -810,6 +907,33 @@ button:focus {
     background-color: #efeffa;
   }
 }
+@keyframes splash2 {
+  0% {
+    background-color: rgba(230, 250, 255, 0.8);
+    color: rgb(0, 0, 0);
+  }
+  20% {
+    background-color: rgba(153, 235, 255, 0.8);
+    color: rgb(0, 0, 0);
+  }
+  40% {
+    background-color: rgba(77, 219, 255, 0.8);
+    color: rgb(230, 250, 255);
+  }
+  60% {
+    background-color: rgba(0, 204, 255, 0.8);
+    color: #fff;
+   }
+  80% {
+    background-color: rgba(0, 102, 204, 0.8);
+    color: rgb(230, 250, 255);
+  }
+  100% {
+    background-color: rgba(153, 235, 255, 0.8);
+    color: rgb(0, 0, 0);
+  }
+}
+
 @keyframes splash1 {
   0% {
     background-color: #fe736c;
@@ -821,8 +945,8 @@ button:focus {
     background-color: #23fd55;
   }
   75% {
-     background-color: #fffe43;
-   }
+    background-color: #fffe43;
+  }
   100% {
     background-color: #fe736c;
   }

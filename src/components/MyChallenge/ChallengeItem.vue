@@ -11,12 +11,88 @@
                 Votes:50K
               </span>
           <div style="font-size: 18px;font-weight: bold">{{cData.c_name}}</div>
-
         </div>
       </div>
-      <div @click="gotoChallengeDetail" class="main_img"
+      <div class="main_img"
            :style="{'background-image':`url('${cData.c_img}')`}"
            v-bind:to="'/challenge-detail/'">
+        <div class="c_handle">
+          <div class="c_handle_item" v-if="status=='open'">
+            <meter-pan :total="wand.total" :val="wand.val" :key="JSON.stringify(wand)"></meter-pan>
+            <div class="pin_div" @click="wandDlg=true">
+<!--              <vs-avatar size="45px" src="https://urpixpays.com/public/img/wand_my.gif"/>-->
+              <div class="pin_title1" style="display: table-cell;vertical-align: middle">
+                <span class="key">Wand</span>
+              </div>
+            </div>
+            <vs-prompt
+              color="success"
+              @cancel=""
+              @accept="setWand()"
+              accept-text="Wand"
+              title="Wand"
+              :active.sync="wandDlg">
+
+              <div class="con-exemple-prompt">
+                <div class="centerx" style="width: auto">
+                  <img height="300" src="https://urpixpays.com/public/img/wand_my.gif"/>
+                </div>
+              </div>
+            </vs-prompt>
+          </div>
+          <div class="c_handle_item">
+<!--            <div style="display: flex ;justify-content: center;">-->
+<!--              <div class="vote_title">500K</div>-->
+<!--              <img src="https://urpixpays.com/public/img/vote_btn.gif" width="30"/>-->
+<!--            </div>-->
+            <div v-if="status=='open'">
+              <b-button @click="popupVote=true" class="vite_btn" variant="outline-dark" size="sm"
+                        style="width: 70px;margin-top: 32px">Vote
+              </b-button>
+              <vs-popup v-if="popupVote" fullscreen title="fullscreen" :active.sync="popupVote">
+                <votes></votes>
+              </vs-popup>
+            </div>
+          </div>
+          <div class="c_handle_item" v-if="status=='open'">
+            <meter-pan1 :total="charge.total" :val="charge.val" :key="JSON.stringify(charge)"></meter-pan1>
+            <div class="pin_div" @click="chargeDlg=true">
+<!--              <vs-avatar size="45px" src="https://urpixpays.com/public/img/charge_btn.gif"/>-->
+              <div class="pin_title1" style="display: table-cell;vertical-align: middle">
+                <span class="key">Charge</span>
+              </div>
+            </div>
+            <vs-prompt
+              color="success"
+              @cancel=""
+              @accept="setCharge()"
+              accept-text="Charge"
+              title="Charge"
+              :active.sync="chargeDlg">
+
+              <div class="con-exemple-prompt">
+                <div class="centerx" style="width: auto">
+                  <img height="300" src="https://urpixpays.com/public/img/charge_btn.gif"/>
+                </div>
+              </div>
+            </vs-prompt>
+          </div>
+<!--          <div class="c_handle_item">-->
+<!--            <div style="display: flex ;justify-content: center;">-->
+<!--              <div class="vote_title">500K</div>-->
+<!--              <img src="https://urpixpays.com/public/img/vote_btn.gif" width="30"/>-->
+<!--            </div>-->
+<!--            <div v-if="status=='open'">-->
+<!--              <b-button @click="popupVote=true" class="vite_btn" variant="outline-dark" size="sm"-->
+<!--                        style="width: 70px;margin-top: 32px">Vote-->
+<!--              </b-button>-->
+<!--              <vs-popup v-if="popupVote" fullscreen title="fullscreen" :active.sync="popupVote">-->
+<!--                <votes></votes>-->
+<!--              </vs-popup>-->
+<!--            </div>-->
+<!--          </div>-->
+        </div>
+        <div  @click="gotoChallengeDetail" class="challenge_detail" >Challenge Details</div>
         <div class="left_time">{{status=='open'?'18D 12h:15m:00s':'Ended'}}</div>
       </div>
       <div class="c_imgs">
@@ -43,68 +119,7 @@
           </b-button>
         </div>
       </div>
-      <div class="c_handle">
-        <div class="c_handle_item" v-if="status=='open'">
-          <meter-pan :total="wand.total" :val="wand.val" :key="JSON.stringify(wand)"></meter-pan>
-          <div class="pin_div" @click="wandDlg=true">
-            <vs-avatar size="45px" src="https://urpixpays.com/public/img/wand_my.gif"/>
-            <div class="pin_title1" style="display: table-cell;vertical-align: middle">
-              <span class="key">Wand</span>
-            </div>
-          </div>
-          <vs-prompt
-            color="success"
-            @cancel=""
-            @accept="setWand()"
-            accept-text="Wand"
-            title="Wand"
-            :active.sync="wandDlg">
 
-            <div class="con-exemple-prompt">
-              <div class="centerx" style="width: auto">
-                <img height="300" src="https://urpixpays.com/public/img/wand_my.gif"/>
-              </div>
-            </div>
-          </vs-prompt>
-        </div>
-        <div class="c_handle_item" v-if="status=='open'">
-          <meter-pan :total="charge.total" :val="charge.val" :key="JSON.stringify(charge)"></meter-pan>
-          <div class="pin_div" @click="chargeDlg=true">
-            <vs-avatar size="45px" src="https://urpixpays.com/public/img/charge_btn.gif"/>
-            <div class="pin_title1" style="display: table-cell;vertical-align: middle">
-              <span class="key">Charge</span>
-            </div>
-          </div>
-          <vs-prompt
-            color="success"
-            @cancel=""
-            @accept="setCharge()"
-            accept-text="Charge"
-            title="Charge"
-            :active.sync="chargeDlg">
-
-            <div class="con-exemple-prompt">
-              <div class="centerx" style="width: auto">
-                <img height="300" src="https://urpixpays.com/public/img/charge_btn.gif"/>
-              </div>
-            </div>
-          </vs-prompt>
-        </div>
-        <div class="c_handle_item">
-          <div style="display: flex ;justify-content: center;">
-            <div class="vote_title">500K</div>
-            <img src="https://urpixpays.com/public/img/vote_btn.gif" width="30"/>
-          </div>
-          <div v-if="status=='open'">
-            <b-button @click="popupVote=true" class="vite_btn" variant="outline-dark" size="sm"
-                      style="width: 70px;margin-top: 32px">Vote
-            </b-button>
-            <vs-popup v-if="popupVote" fullscreen title="fullscreen" :active.sync="popupVote">
-              <votes></votes>
-            </vs-popup>
-          </div>
-        </div>
-      </div>
       <vs-prompt
         color="success"
         @cancel=""
@@ -128,6 +143,7 @@
 </template>
 <script>
   import MeterPan from './MeterPan'
+  import MeterPan1 from './MeterPan1'
   import Votes from "../ChallengeDetail/Votes";
 
   export default {
@@ -177,7 +193,7 @@
 
     },
     components: {
-      MeterPan, Votes
+      MeterPan, Votes, MeterPan1
     },
     mounted() {
       //this.$refs.videoRef.src = "";

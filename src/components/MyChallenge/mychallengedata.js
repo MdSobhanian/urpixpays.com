@@ -13,7 +13,7 @@ export default [
     imgs:[
       {
         id:'test1',
-        url:'https://urpixpays.com/public/uploads/images/f99687dd719c4e8bc6a39e946c3d9ef74667.jpg'
+        url:'https://urpixpays.com/public/uploads/challengesimages/471Resort.jpg'
       },
       {
         id:'test1',
@@ -31,7 +31,7 @@ export default [
     rank:1,
     u_id:'123',
     amountOfImg:4,
-    c_img:'https://urpixpays.com/public/uploads/challengesimages/2eb3e423554ac97fde8d3ac06c748e6a.jpg'
+    c_img:'https://urpixpays.com/public/uploads/challengesimages/471Resort.jpg'
   },
   {
     c_id:'2',
@@ -65,7 +65,7 @@ export default [
     rank:1,
     u_id:'123',
     amountOfImg:4,
-    c_img:'https://urpixpays.com/public/uploads/challengesimages/2eb3e423554ac97fde8d3ac06c748e6a.jpg'
+    c_img:'https://urpixpays.com/public/uploads/challengesimages/be827c7cbe654914bf6e14c17895bcf0.jpg'
   },
   {
     c_id:'3',
@@ -99,7 +99,7 @@ export default [
     rank:1,
     u_id:'123',
     amountOfImg:4,
-    c_img:'https://urpixpays.com/public/uploads/challengesimages/2eb3e423554ac97fde8d3ac06c748e6a.jpg'
+    c_img:'https://urpixpays.com/public/uploads/challengesimages/1010311d0b8b4280655d482d90e9d271.jpg'
   },
   {
     c_id:'4',
@@ -133,7 +133,7 @@ export default [
     rank:1,
     u_id:'123',
     amountOfImg:4,
-    c_img:'https://urpixpays.com/public/uploads/challengesimages/2eb3e423554ac97fde8d3ac06c748e6a.jpg'
+    c_img:'https://urpixpays.com/public/uploads/challengesimages/57d62ff0c23090d5f23446e0939dbce7.jpg'
   },
   {
     c_id:'5',

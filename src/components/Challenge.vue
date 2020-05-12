@@ -2,7 +2,7 @@
   <div class="g_challenge">
     <div class="challenge_div_header">
       <vs-card class="cardx">
-        <div slot="header">
+        <div slot="header" class="challenge-header">
           <div style="position: relative">
             <span style="float: left;font-size: 14px;margin-top: 3px">
               Prize:$300
@@ -11,7 +11,6 @@
                 Votes:50K
               </span>
             <div style="font-size: 16px;font-weight: bold">Bird Photography</div>
-
           </div>
         </div>
         <div class="main_img"
@@ -37,6 +36,17 @@
   }
 </script>
 <style lang="scss">
+  .main_img{
+    /*.challenge-header{*/
+    /*  background: rgba(0,0,0,0.8);*/
+    /*  color: white;*/
+    /*  padding: 10px;*/
+    /*}*/
+    /*.main_img_title{*/
+    /*  top: 200px;*/
+    /*  bottom: 0;*/
+    /*}*/
+  }
   .g_challenge:hover{
     transform: scale(1.04);
     .main_img_title{

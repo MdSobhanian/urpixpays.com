@@ -1,5 +1,5 @@
 <template>
-  <div class="c_handle_pan" style="background-image: url('static/imgs/challenge/pan.png');opacity: 0.85;">
+  <div class="c_handle_pan" style="background-image: url('static/imgs/challenge/charge.png');opacity: 0.85;">
     <img :style="{'transform':'rotate('+charge.val/charge.total*180+'deg)'}" class="needle" src="static/imgs/challenge/niddle.png">
   </div>
 </template>

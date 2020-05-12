@@ -63,7 +63,7 @@
   .profile{
     width: 100px;
     height: 100px;
-    background-image: url("/static/imgs/landing/f_logo.png");
+    background-image: url("http://resource.crazy-about-photography.com/static/imgs/landing/f_logo.png");
     background-position: center;
     background-size: contain;
     border-radius: 50%;
@@ -73,7 +73,7 @@
   .award-img{
     width: 150px;
     height: 150px;
-    background-image: url("/static/imgs/InfoPage/ip18.jpg");
+    background-image: url("http://resource.crazy-about-photography.com/static/imgs/InfoPage/ip18.jpg");
     background-position: center;
     background-size: contain;
     border-radius: 10px;

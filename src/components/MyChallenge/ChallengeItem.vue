@@ -55,7 +55,11 @@
             </div>
           </div>
           <div class="c_handle_item" v-if="status=='open'">
-            <meter-pan1 :total="charge.total" :val="charge.val" :key="JSON.stringify(charge)"></meter-pan1>
+            <meter-pan :total="charge.total" :val="charge.val" :key="JSON.stringify(charge)">
+              <template #pan>
+                <img src="http://resource.crazy-about-photography.com/static/imgs/challenge/charge.png" style="width: 100%">
+              </template>
+            </meter-pan>
             <div class="pin_div" @click="chargeDlg=true">
 <!--              <vs-avatar size="45px" src="https://urpixpays.com/public/img/charge_btn.gif"/>-->
               <div class="pin_title1" style="display: table-cell;vertical-align: middle">
@@ -142,8 +146,8 @@
   </div>
 </template>
 <script>
-  import MeterPan from './MeterPan'
-  import MeterPan1 from './MeterPan1'
+  import MeterPan from './MeterPan/MeterPan'
+  // import MeterPan1 from './MeterPan1'
   import Votes from "../ChallengeDetail/Votes";
 
   export default {
@@ -193,7 +197,7 @@
 
     },
     components: {
-      MeterPan, Votes, MeterPan1
+      MeterPan, Votes
     },
     mounted() {
       //this.$refs.videoRef.src = "";

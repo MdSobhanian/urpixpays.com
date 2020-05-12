@@ -1,10 +1,10 @@
 <template>
   <div class="infoPage">
     <b-row >
-        <b-col lg="6" v-for="(item,index) in dataList" style="margin-bottom: 20px;">
+        <b-col lg="6" v-for="(item,index) in dataList" :key="index" style="margin-bottom: 20px;">
           <div class="title text-content" data-aos="fade-right">
             <h3>{{item.title}}</h3>
-            <img v-bind:src="item.url" width="100%">
+            <img :src="getUrl(item.url)" width="100%">
             <h6>{{item.content}}</h6>
           </div>
         </b-col>
@@ -35,13 +35,16 @@
     },
     data() {
       return {
+
         infoPageData,
         dataList:[],
         isLoading:true
       }
     },
     methods: {
-
+      getUrl(val){
+        return process.env.VUE_APP_R_URL+val
+      },
       handleScroll (event) {
         // Any code to be executed when the window is scrolled
         var scrollPos = window.scrollY

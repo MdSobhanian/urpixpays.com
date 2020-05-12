@@ -62,6 +62,9 @@ import Loader from "./components/Loader";
 Vue.component('loader',Loader)
 /* eslint-disable no-new */
 window.Event = new Vue();
+Vue.prototype.$getResourceUrl=function getResourceUrl(val){
+  return process.env.VUE_APP_R_URL+val;
+}
 new Vue({
   el: '#app',
   router,

@@ -1,8 +1,9 @@
 <template>
   <div class="ladingPage">
     <div class="video_div"
-         style="background: url('static/imgs/landing.PNG');background-repeat: no-repeat;background-size: cover;background-position: center;height: 100vh">
-      <video ref="videoRef" class="video-player" loop autoplay muted src="/static/imgs/Urpixpays-4notext.mp4">
+         :style="{'background-image':`url('${this.$getResourceUrl('static/imgs/landing.PNG')}')`}"
+         style="background-repeat: no-repeat;background-size: cover;background-position: center;height: 100vh">
+      <video ref="videoRef" class="video-player" loop autoplay muted src="http://resource.crazy-about-photography.com/static/imgs/Urpixpays-4notext.mp4">
       </video>
       <div class="title" data-aos="fade-up">
         <div style="font-family: Impact, Charcoal, sans-serif;color: #f2f2f2;">
@@ -27,7 +28,7 @@
               </h3>
             </div>
             <div slot="media">
-              <img src="/static/imgs/landing/21.PNG" height="180px;">
+              <img src="http://resource.crazy-about-photography.com/static/imgs/landing/21.PNG" height="180px;">
             </div>
             <div>
               <span>URPIXPAYS was created by a group of passionate photographers. The goal behind its creation has always been
@@ -44,7 +45,7 @@
               </h3>
             </div>
             <div slot="media">
-              <img src="/static/imgs/landing/mission.PNG" height="180px;">
+              <img src="http://resource.crazy-about-photography.com/static/imgs/landing/mission.PNG" height="180px;">
             </div>
             <div>
               <span>To help people show the world their photo taking talent.To provide skillful photographers with a platform on
@@ -78,7 +79,7 @@
               </h3>
             </div>
             <div slot="media">
-              <img src="/static/imgs/landing/selling.PNG" height="180px">
+              <img src="http://resource.crazy-about-photography.com/static/imgs/landing/selling.PNG" height="180px">
             </div>
             <div>
               <span>URPIXPAYS allows its members to sell their original photos to rack up some extra cash. Members can also buy photos through URPIXPAYS bidding system. We are also open to new ideas and chances to improve ourselves, so contact us at URPIXPAYS.</span>
@@ -94,14 +95,14 @@
         Urpixpays is where you will be inspired, and in turn receive recognition.
       </div>
       <div class="best-image-div">
-        <img  src="/static/imgs/landing/kk.png" width="100%">
+        <img  src="http://resource.crazy-about-photography.com/static/imgs/landing/kk.png" width="100%">
       </div>
     </div>
     <b-row>
       <b-col md="6" style="margin-bottom: 20px; padding:20px;padding-top: 0;">
         <div class="title text-content" >
           <h3>Photo Flip</h3>
-          <img src="/static/imgs/InfoPage/ip14.gif" width="100%">
+          <img src="http://resource.crazy-about-photography.com/static/imgs/InfoPage/ip14.gif" width="100%">
           <h6>The photography challenges hosted by URPIXPAYS are second to none.
             Strive to achieve a successful flip by ensuring that the photo you post
             gets more votes than the one it replaced in a challenge.</h6>
@@ -110,7 +111,7 @@
       <b-col md="6" style="margin-bottom: 20px; padding:20px;padding-top: 0;">
         <div class="title text-content" >
           <h3>PHOTO EXPERIMENT</h3>
-          <img src="/static/imgs/landing/pex.PNG" width="100%">
+          <img src="http://resource.crazy-about-photography.com/static/imgs/landing/pex.PNG" width="100%">
           <h6>Stand out among the rest by sharing photos that are totally unique.
             For this purpose, URPIXPAYS encourages its members to experiment with
             different photography styles. You never know which shot can make you an overnight sensation.</h6>
@@ -119,7 +120,7 @@
       <b-col md="6" style="margin-bottom: 20px; padding:20px;padding-top: 0;">
         <div class="title text-content" >
           <h3>Rank</h3>
-          <img src="/static/imgs/InfoPage/ip18.jpg" width="100%">
+          <img src="http://resource.crazy-about-photography.com/static/imgs/InfoPage/ip18.jpg" width="100%">
           <h6>The photography challenges hosted by URPIXPAYS are second to none.
             Strive to achieve a successful flip by ensuring that the photo you post
             gets more votes than the one it replaced in a challenge.</h6>
@@ -128,7 +129,7 @@
       <b-col md="6" style="margin-bottom: 20px; padding:20px;padding-top: 0;">
         <div class="title text-content" >
           <h3>Photo Charge And Wand</h3>
-          <img src="/static/imgs/InfoPage/ip13.gif" width="100%">
+          <img src="http://resource.crazy-about-photography.com/static/imgs/InfoPage/ip13.gif" width="100%">
           <h6>Stand out among the rest by sharing photos that are totally unique.
             For this purpose, URPIXPAYS encourages its members to experiment with
             different photography styles. You never know which shot can make you an overnight sensation.</h6>
@@ -137,7 +138,7 @@
       <b-col md="6" style="margin-bottom: 20px; padding:20px;padding-top: 0;">
         <div class="title text-content" >
           <h3>CREATIVITY</h3>
-          <img src="/static/imgs/landing/art.PNG" width="100%">
+          <img src="http://resource.crazy-about-photography.com/static/imgs/landing/art.PNG" width="100%">
           <h6>With URPIXPAYS by your side, you no longer have to suppress your creative self.
             Show us what you are capable of and get rewarded accordingly.</h6>
         </div>
@@ -146,7 +147,7 @@
       <b-col md="6" style="margin-bottom: 20px; padding:20px;padding-top: 0;">
         <div class="title text-content" >
           <h3>Quality</h3>
-          <img src="/static/imgs/landing/quality.PNG" width="100%">
+          <img src="http://resource.crazy-about-photography.com/static/imgs/landing/quality.PNG" width="100%">
           <h6>Experience quality in its finest form.
             Everything that you come across on URPIXPAYS, be it photos,
             challenge moderation or anything else, you will notice that
@@ -160,7 +161,7 @@
 </template>
 <script>
   import AOS from 'aos';
-
+  import store from '../../store';
   export default {
     mounted() {
       //this.$refs.videoRef.src = "";
@@ -168,8 +169,8 @@
         easing: 'ease-out-back',
         duration: 1000
       });
-
     },
+
     created() {
 
     },

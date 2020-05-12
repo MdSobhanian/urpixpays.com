@@ -13,7 +13,7 @@
         </div>
         <div class="img-container">
           <b-row style="justify-content: center">
-            <b-col sm="3" v-for="(item1, index) in item.images"
+            <b-col sm="3" v-for="(item1, index) in item.images" :key="index"
                    class="img-div" :style="{'background-image': 'url('+item1.url+')','background-position':'center','background-size': 'cover'}">
               <div class="title-item right">
                 <b-icon class="item-hover" icon="exclamation-octagon" scale="1.1" style="color: white; text-shadow: 0 0 3px #000000, 0 0 5px #000000;"></b-icon>

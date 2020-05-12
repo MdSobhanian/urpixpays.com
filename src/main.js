@@ -26,7 +26,7 @@ const firebaseConfig = {
   appId: "1:415070639966:web:e115c5f66277eadd23e1cf",
   measurementId: "G-6C0RDFRE31"
 };
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig) ;
 import store from "./store";
 firebase.auth().onAuthStateChanged(user => {
   if (user){

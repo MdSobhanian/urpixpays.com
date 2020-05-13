@@ -2,12 +2,12 @@
   <div id="parentx" >
     <b-button @click="setActive(true)" variant=" log-btn" style="padding: 0;display: flex">
 <!--      <i class="fas fa-bars"></i>-->
-      <vs-avatar  size="30px" :src="user.photoURL==''?'./static/imgs/default_avartar.png':user.photoURL"/><div style="line-height: 40px;color: white">{{user.name}}</div>
+      <vs-avatar  size="30px" :src="user.photoURL==''?this.$getResourceUrl('/static/imgs/default_avartar.png'):user.photoURL"/><div style="line-height: 40px;color: white">{{user.name}}</div>
     </b-button>
     <vs-sidebar position-right :reduce="reduce" :reduce-not-hover-expand="notExpand" parent="body" default-index="1"  color="success" class="sidebarx" spacer :value="active">
       <div @click="setActive(false)" style="position: absolute; top: 0; left: 10px;cursor: pointer"><i class="fas fa-times"></i></div>
       <div class="header-sidebar" slot="header" >
-        <vs-avatar  size="70px" :src="user.photoURL==''?'./static/imgs/default_avartar.png':user.photoURL"/>
+        <vs-avatar  size="70px" :src="user.photoURL==''?this.$getResourceUrl('/static/imgs/default_avartar.png'):user.photoURL"/>
       </div>
       <vs-sidebar-group open title="UrPixPays">
 <!--        <vs-sidebar-item index="1" icon="menu" @click="reduce=!reduce">-->
@@ -186,36 +186,5 @@
 </script>
 
 <style lang="scss">
-  .vs-sidebar{
-    background-color: #121822;
-    color: white;
-    border: 1px solid gray;
-  }
-  .header-sidebar{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    h4{
-      display : flex;
-      align-items:center;
-      justify-content: center;
-      width : 100%;
-      button{
-        margin-left: 10px
-      }
-    }
-  }
-  .footer-sidebar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    button{
-      border: 0px solid rgba(0,0,0,0) !important;
-      border-left: 1px solid rgba(0,0,0,.07) !important;
-      border-radius: 0px !important;
-    }
-  }
+
 </style>

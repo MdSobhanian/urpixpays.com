@@ -1,6 +1,6 @@
 <template>
   <div class="footer-area">
-    <div class="row">
+    <div class="row" style="z-index: 0;">
       <div class="col-sm-3" style="margin-bottom: 20px">
         <div class="footer li_style widget_text" style="color:white; text-declaton:none;text-align: left">
         <img src="http://resource.crazy-about-photography.com/static/imgs/Logo-Horizontal-Small.gif" width="150px" style="border-radius: 20%;">

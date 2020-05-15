@@ -9,7 +9,8 @@
         <div style="font-family: Impact, Charcoal, sans-serif;color: #f2f2f2;">
           <h1 style="color: #f2f2f2">SUBMIT YOUR PHOTOS AND WIN CASH!</h1>
           <h4>You will love taking photos like never before</h4>
-          <b-button variant="outline-light" style="font-family: 'Roboto', sans-serif">Join Now</b-button>
+          <b-button variant="outline-light"
+            style="font-family: 'Roboto', sans-serif; font-family: Roboto, sans-serif; width: 200px; height: 53px; font-size: 26px;">Join Now</b-button>
         </div>
       </div>
       <div class="hover-title">

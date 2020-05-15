@@ -5,6 +5,10 @@
     <div style="padding: 10px 0 0 0;margin: 10px 0 0 0; display: flex;flex-wrap: wrap;" >
       <challenge-item v-for="item in cList" :key="item.c_id" :c-data="item"></challenge-item>
     </div>
+
+    <div style="height: 500px;display: flex;position: fixed;bottom: 0px; right: 0; z-index: 10;">
+      <vt-chart v-for="(chatItem,index) in chatList" :key="index" :g-chat-list="chatItem" user_id="0" />
+    </div>
   </div>
 </template>
 <script>
@@ -20,7 +24,71 @@
     data(){
       return{
         mychallengedata,
-        cList:[],isGettingData:false
+        cList:[],
+        isGettingData:false,
+        chatList: [
+          { _id: '0',
+            users: [
+              { uid: '0',
+                name: 'tolren',
+                photoUrl: 'https://randomuser.me/api/portraits/men/85.jpg',
+                title: '',
+                read_at:'2020-05-13T11:46:37.254Z' },
+              { uid: '1',
+                name: 'support',
+                photoUrl: 'https://randomuser.me/api/portraits/women/44.jpg',
+                title: '',
+                read_at:'2020-05-13T11:46:38.254Z' },
+              { uid: '2',
+                name: 'wenge',
+                photoUrl: 'https://randomuser.me/api/portraits/women/45.jpg',
+                title: '', read_at:'2020-05-13T11:46:38.254Z' }
+                ],
+            messages: [
+              { text: 'Hello',
+                type: 'text',
+                isEdit: false,
+                created_at: "2020-05-13T11:46:36.254Z",
+                edit_at: '',
+                uid: '0',
+                isSent: true, },
+              { text: 'Hello',
+                type: 'text',
+                created_at: "2020-05-13T11:46:37.254Z",
+                edit_at: '',
+                uid: '1',
+                isSent: true, },
+              { text: 'https://randomuser.me/api/portraits/women/45.jpg',
+                type: 'file',
+                created_at: "2020-05-13T11:46:37.254Z",
+                edit_at: '',
+                uid: '1',
+                isSent: true, },
+              { text: 'https://randomuser.me/api/portraits/women',
+                type: 'file',
+                created_at: "2020-05-13T11:46:37.254Z",
+                edit_at: '', uid: '1',
+                isSent: true, },
+              { text: 'Nice to meet you',
+                type: 'text',
+                created_at: "2020-05-13T11:46:38.254Z",
+                edit_at: '',
+                uid: '1',
+                isSent: true, },
+              { text: 'Nice to meet you too',
+                type: 'text',
+                created_at: "2020-05-13T11:46:39.254Z",
+                edit_at: '',
+                uid: '0',
+                isSent: true, },
+              { text: 'How are you?',
+                type: 'text',
+                created_at: "2020-05-13T11:48:36.254Z",
+                edit_at: '',
+                uid: '0',
+                isSent: true, }
+                ]
+          } ]
       }
     },
     created() {
@@ -72,3 +140,4 @@
     }
   }
 </script>
+

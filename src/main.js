@@ -58,6 +58,7 @@ import vuesax from 'vuesax'
 import 'vuesax/dist/vuesax.css'
 import './assets/css/style.scss'
 import vtcomponents from 'vt-components'
+
 Vue.use(vtcomponents)
 // import 'material-icons/iconfont/material-icons.css';
 Vue.use(vuesax)

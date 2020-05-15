@@ -1,6 +1,10 @@
 $material-icons-font-path: '~material-icons/iconfont/';
+
 //
 @import '~material-icons/iconfont/material-icons.scss';
+
+@import 'vt-components/dist/vt-components.css';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

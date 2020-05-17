@@ -4,7 +4,7 @@
       <img src="http://resource.crazy-about-photography.com/static/imgs/Logo-Horizontal-Small.gif" alt="this slowpoke moves" width=150/></b-navbar-brand>
     <div class="navbar-menu">
       <b-navbar-nav class="main_menu">
-        <b-nav-item v-bind:to="'/home'">Challenge</b-nav-item>
+        <b-nav-item v-bind:to="'/home'">CHALLENGE</b-nav-item>
         <b-nav-item v-bind:to="'/best_images'">BEST IMAGES</b-nav-item>
         <b-nav-item v-bind:to="'/info-page'">INFO PAGE</b-nav-item>
         <b-nav-item v-bind:to="'/gallery'">GALLERY</b-nav-item>

@@ -1,6 +1,6 @@
 <template>
-  <div class="navar-container" >
-    <guest-menu v-if="!isMenu" :key="$route.path"></guest-menu>
+  <div class="navar-container" :key="isMenu">
+    <guest-menu v-if="!isMenu" ></guest-menu>
     <user-menu v-else></user-menu>
   </div>
 </template>
@@ -31,8 +31,9 @@
         } else {
           self.isMenu=false
         }
+        console.log("this.isMenu",this.isMenu)
       })
-      console.log(this.isMenu)
+
     }
   }
 </script>

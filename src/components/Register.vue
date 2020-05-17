@@ -159,7 +159,8 @@
         firebase.auth().createUserWithEmailAndPassword(this.form.email, this.password).then(res=>{
           console.log('success',res)
 
-          firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).set(this.form)
+          // /firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).set(this.form)
+          self.setUser({auth:firebase.auth().currentUser,info:this.form})
           self.emailLink(res)
         }).catch((error)=> {
           // Handle Errors here.
@@ -171,6 +172,10 @@
           console.log(error)
           self.makeToast('warning','Sign Up','OOP! Please try later');
         });
+      },
+      setUser(data){
+        window.axios.post(`${process.env.VUE_APP_API_URL}setUser`,{collection:'users',data:data}).then(({data})=>{
+        })
       },
       emailLink(email){
         let self=this

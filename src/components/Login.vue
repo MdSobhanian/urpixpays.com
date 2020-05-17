@@ -122,34 +122,53 @@
               this.error1 = "Your account does not verified yet."
               return
             }*/
-            Event.$emit('isLoad',false)
-            firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get()
-              .then(doc => {
-                if (doc.empty) {
-                  this.error = "You have no permission for admin panel!"
-                  return;
-                }
-                var account = doc.data();
-                console.log(this.form.email, account);
-                /*data.user
-                  .updateProfile({
-                    displayName: account.displayName
-                  })
-                  .then(() => {
-                  });*/
+            console.log('logincheck')
 
-                self.$router.push('/home');
 
-              })
-              .catch(err => {
-                console.log('Error getting documents', err);
-              });
+            window.axios.post(`${process.env.VUE_APP_API_URL}getUser`,{uid:firebase.auth().currentUser.uid}).then(({data})=>{
+              if (data.state==-1){
+                this.$vs.notify(data.notify)
+                firebase.auth().signOut()
+              }
+              store.state.userData= data.result
+              console.log('logincheck',data.result)
+              //self.setUser({auth:firebase.auth().currentUser,info:account})
+              // self.$router.push('/home');
+            })
 
           })
           .catch(err => {
             this.error = err.message;
           });
-      }
+      },
+      setUser(data){
+        window.axios.post('http://13.233.42.88:3000/setUser',{collection:'users',data:data}).then(({data})=>{
+        })
+      },
+      emailLink(email){
+        let self=this
+        console.log('firebase.auth().currentUser',firebase.auth().currentUser)
+        firebase.auth().currentUser.sendEmailVerification()
+          .then(function() {
+            // Verification email sent.
+            //self.makeToast('success','Sign Up','Please check verification link in your mail box');
+            self.$vs.notify({
+              color:'warning',
+              title:'Authentication Warning',
+              text:'Please check verification link in your mail box'
+            })
+            self.$emit('cancel')
+          })
+          .catch(function(error) {
+            // Error occurred. Inspect error.code.
+            //self.makeToast('warning','Sign Up','OOP! Please try later');
+            self.$vs.notify({
+              color:'warning',
+              title:'Authentication Warning',
+              text:'OOP! Please try later'
+            })
+          });
+      },
     }
   }
 

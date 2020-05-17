@@ -5,34 +5,93 @@
         <div slot="header" class="challenge-header">
           <div style="position: relative">
             <span style="float: left;font-size: 14px;margin-top: 3px">
-              Prize:$300
+              Prize:${{cList2.prize}}
             </span>
             <span style="float: right;font-size: 14px;margin-top: 3px">
-                Votes:50K
+                Votes: {{cList2.votes || 0}}
               </span>
-            <div style="font-size: 16px;font-weight: bold">Bird Photography</div>
+            <div style="font-size: 16px;font-weight: bold">{{cList2.title}}</div>
           </div>
         </div>
         <div class="main_img"
-             style="background-image: url('https://urpixpays.com/public/uploads/challengesimages/457PGN.jpg')">
-          <div class="main_img_title"> Jack </div>
+             :style="{'background-image' : 'url(' + cList2.img_url+')'}">
+          <div class="main_img_title"> {{cList2.sponsor_name}} </div>
           <div class="left_time">
-            {{status=='open'?'18D 12h:15m:00s':'Ended'}}
-            <div v-if="status=='open'" class="join_btn" style="float: right;width:60px;padding: 0" >Join</div>
+            {{status=='open'? this.time: 'Ended'}}
           </div>
+          <div v-if="status=='open'" class="join_btn" style="width:60px; padding: 0; position: absolute; bottom: 120px; left: 140px;" >
+            <b-button class="join_btn1" @click="joinChallenge = true" style="background: rgba(0,0,0,0.5); color: white; letter-spacing: 1px;">Join</b-button></div>
         </div>
+        <vs-prompt
+          color="rgb(60, 139, 221)"
+          @cancel=""
+          cancel-text="Cancel"
+          @accept="join_Challenge()"
+          accept-text="Continue"
+          :title="this.cList2.title"
+          :active.sync="joinChallenge">
+
+          <div class="con-exemple-prompt">
+            <div class="centerx" style="min-width: 350px; min-height: 300px;">
+                {{this.cList2.description}}
+            </div>
+          </div>
+        </vs-prompt>
       </vs-card>
     </div>
   </div>
 </template>
 <script>
+  import userinfo from '../store'
   export default {
     props: {
+      cList1:{
+        type:Object,
+        default: function () { return {} }
+      },
       status: {
         type: String,
         default: 'open'//past
       }
     },
+    created() {
+      console.log('userinfocheck',userinfo.state.user.data.email)
+      let self=this
+      var currentDate = new Date()
+      var startDate = new Date(this.start_at)
+      var diff = parseInt((startDate - currentDate)/1000) + this.cList2.period*3600
+        console.log(diff)
+      self.time = self.getTime(diff)
+      // console.log('this.cdata check', this.cList1)
+      this.timer=setInterval(function () {
+        if (diff==0) return;
+        diff--
+        // console.log(diff)
+        self.time = self.getTime(diff)
+      },1000)
+    },
+    data(){
+      return{
+        cList2: this.cList1,
+        time: 0,
+        start_at: "2020-05-16T21:22:24.507Z",
+        joinChallenge: false
+      }
+    },
+    beforeDestroy() {
+      this.timer=null
+    },
+    methods:{
+      getTime(val){
+        let s=val % 60
+        let m=val / 60 % 60
+        let h=val /60/60%60
+        return `${h.toFixed(0)}:${m.toFixed(0)}:${s.toFixed(0)}`
+      },
+      join_Challenge(){
+        alert('Ok');
+      }
+    }
   }
 </script>
 <style lang="scss">
@@ -83,12 +142,14 @@
 
       .left_time {
         position: absolute;
-        width: 100%;
+        left: 95px;
+        width: 150px;
         bottom: 0;
         color: #fff;
-        background-color: rgba(0, 0, 0, 0.81);
-        margin: 0px;
-        padding: 14px 5px 14px 5px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 5px;
+        font-size: 16px;
+        letter-spacing: 2px;
         .join_btn{
           cursor: pointer;
           border-radius: 5px;
@@ -101,4 +162,9 @@
       }
     }
   }
+
+
+</style>
+<style>
+
 </style>

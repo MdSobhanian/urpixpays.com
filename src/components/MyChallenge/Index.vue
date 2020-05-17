@@ -3,7 +3,7 @@
     <challenge-header></challenge-header>
 <!--    <b-button @click="test">test</b-button>-->
     <div style="padding: 10px 0 0 0;margin: 10px 0 0 0; display: flex;flex-wrap: wrap;" >
-      <challenge-item v-for="item in cList" :key="item.c_id" :c-data="item"></challenge-item>
+      <challenge-item v-for="(item,index) in cList" :key="index" :c-data="item"></challenge-item>
     </div>
 
     <div style="height: 500px;display: flex;position: fixed;bottom: 0px; right: 0; z-index: 10;">
@@ -93,6 +93,7 @@
     },
     created() {
       this.showMore()
+      // this.readData()
     },
     mounted() {
       //this.$refs.videoRef.src = "";
@@ -136,6 +137,18 @@
           duration: 1000
         });
         this.isGettingData=false
+      },
+      readData() {
+        window.axios.post(
+          `${process.env.VUE_APP_API_URL}getChallenges`,
+          {
+
+          }
+        ).then(({data})=>{
+          // console.log('getChallenges',data)
+          this.cList=data.result
+          console.log('getchallengeslist',this.cList)
+        })
       },
     }
   }

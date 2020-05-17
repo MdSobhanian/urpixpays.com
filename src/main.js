@@ -75,3 +75,7 @@ new Vue({
   components: { App },
   template: '<App/>',
 })
+
+window.axios = require('axios');
+window.axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+window.axios.defaults.baseURL = 'http://35.181.127.170:3000/';

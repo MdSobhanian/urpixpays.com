@@ -9,6 +9,7 @@
   import firebase from "firebase";
   import GuestMenu from "./GuestMenu";
   import UserMenu from "./UserMenu";
+  import store from "../store";
   export default {
     components: {GuestMenu,UserMenu},
     component: {
@@ -26,12 +27,24 @@
       console.log(firebase.auth().currentUser)
       let self=this
       firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-          self.isMenu=true
-        } else {
+        // console.log('userinfo',user.uid)
+        if (user){
+          window.axios.post(`${process.env.VUE_APP_API_URL}getUser`,{uid:user.uid}).then(({data})=>{
+            if (data.state==-1){
+              this.$vs.notify(data.notify)
+            }
+            if (data.state == 0) {
+              store.state.user.data= data.result
+              self.isMenu=true
+              // console.log('username', store.state.user.info.name)
+            } else {
+              self.isMenu=false
+            }
+          })
+        }else{
           self.isMenu=false
         }
-        console.log("this.isMenu",this.isMenu)
+        // console.log("this.isMenu",this.isMenu)
       })
 
     }

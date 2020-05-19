@@ -106,6 +106,7 @@
 
 <script>
   import firebase from "firebase";
+  import store from "../store";
   export default {
     data:()=>({
       active:false,
@@ -115,7 +116,7 @@
         email: "",
         name:"",
         birthday:"",
-        photoURL:''
+        photoURL:store.state.user.data.info.photoUrl||''
       }
     }),
     methods:{
@@ -141,14 +142,7 @@
           //this.displayName=user.displayName;
           self.user =user;
           //console.log('login check1',self.user);
-          firebase.firestore().collection('users').doc(user.uid).onSnapshot(doc => {
-            self.user=doc.data();
-            if (doc.data().photoURL==undefined){
-              self.user.photoURL=''
-            }
-            // console.log(self.user)
 
-          })
           switch (this.$router.currentRoute.name) {
             case 'GuestHome':
               // case 'InfoPage':

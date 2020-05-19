@@ -46,7 +46,7 @@
 
 <script>
   import firebase from "firebase";
-
+  import store from "../store";
   export default {
     name: 'Login',
     data() {
@@ -123,17 +123,15 @@
               return
             }*/
             console.log('logincheck')
-
-
             window.axios.post(`${process.env.VUE_APP_API_URL}getUser`,{uid:firebase.auth().currentUser.uid}).then(({data})=>{
               if (data.state==-1){
                 this.$vs.notify(data.notify)
                 firebase.auth().signOut()
               }
               store.state.userData= data.result
-              console.log('logincheck',data.result)
+              console.log('logincheck000',data.result)
               //self.setUser({auth:firebase.auth().currentUser,info:account})
-              // self.$router.push('/home');
+              self.$router.push('/home');
             })
 
           })

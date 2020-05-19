@@ -42,7 +42,7 @@
           email: "",
           name:"",
           birthday:"",
-          photoURL:''
+          photoURL:store.state.user.data.info.photoUrl||''
         }
       }
     },
@@ -50,17 +50,9 @@
       let self=this
       firebase.auth().onAuthStateChanged(user => {
         if (user){
-          //this.displayName=user.displayName;
-          self.user =user;
-           console.log('login check1',self.user);
-           firebase.firestore().collection('users').doc(user.uid).onSnapshot(doc => {
-             self.user=doc.data();
-             if (doc.data().photoURL==undefined){
-               self.user.photoURL=''
-             }
-             // console.log(self.user)
-
-           })
+           console.log('username', store.state.user.data)
+          self.email = store.state.user.data.info.email
+          self.name = store.state.user.data.info.name
           switch (this.$router.currentRoute.name) {
             case 'GuestHome':
             // case 'InfoPage':

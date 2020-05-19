@@ -151,14 +151,13 @@
         });
       },
       submit() {
-        if (!this.isRecaptcha){
-          this.recaptchaErr='Please check robot'
-          return
-        }
+        // if (!this.isRecaptcha){
+        //   this.recaptchaErr='Please check robot'
+        //   return
+        // }
         let self=this
         firebase.auth().createUserWithEmailAndPassword(this.form.email, this.password).then(res=>{
           console.log('success',res)
-
           // /firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).set(this.form)
           self.setUser({auth:firebase.auth().currentUser,info:this.form})
           self.emailLink(res)
@@ -168,7 +167,7 @@
           var errorMessage = error.message;
           // ...
           this.error=errorMessage
-          // this.emailLink(self.form.email)
+          this.emailLink(self.form.email)
           console.log(error)
           self.makeToast('warning','Sign Up','OOP! Please try later');
         });

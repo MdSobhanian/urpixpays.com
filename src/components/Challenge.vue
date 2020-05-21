@@ -74,7 +74,7 @@
       return{
         cList2: this.cList1,
         time: 0,
-        start_at: "2020-05-16T21:22:24.507Z",
+        start_at: "2020-05-18T21:22:24.507Z",
         joinChallenge: false
       }
     },

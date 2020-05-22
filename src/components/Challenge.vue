@@ -43,6 +43,7 @@
 </template>
 <script>
   import userinfo from '../store'
+  import store from "../store";
   export default {
     props: {
       cList1:{
@@ -89,7 +90,20 @@
         return `${h.toFixed(0)}:${m.toFixed(0)}:${s.toFixed(0)}`
       },
       join_Challenge(){
-        alert('Ok');
+        console.log(this.cList2._id)
+        let join_item={
+          c_id: this.cList2._id,
+          created_at: new Date().toISOString(),
+          variable: {
+            vote_count: 0,
+            voted_count: 0,
+            status:'Active'
+          }
+        }
+        console.log(join_item)
+        window.axios.post(`${process.env.VUE_APP_API_URL}join_challenge`, {data:join_item,uid:store.state.userData.auth.uid}).then(({data})=>{
+          this.$vs.notify(data.notify);
+        })
       }
     }
   }

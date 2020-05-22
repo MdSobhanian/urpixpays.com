@@ -6,9 +6,9 @@
       <challenge-item v-for="(item,index) in cList" :key="index" :c-data="item"></challenge-item>
     </div>
 
-    <div style="height: 500px;display: flex;position: fixed;bottom: 0px; right: 0; z-index: 10;">
+    <!--<div style="height: 500px;display: flex;position: fixed;bottom: 0px; right: 0; z-index: 10;">
       <vt-chart v-for="(chatItem,index) in chatList" :key="index" :g-chat-list="chatItem" user_id="0" />
-    </div>
+    </div>-->
   </div>
 </template>
 <script>

@@ -34,7 +34,7 @@
               this.$vs.notify(data.notify)
             }
             if (data.state == 0) {
-              store.state.user.data= data.result
+              store.state.userData= data.result
               self.isMenu=true
               // console.log('username', store.state.user.info.name)
             } else {

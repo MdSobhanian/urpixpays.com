@@ -116,7 +116,7 @@
         email: "",
         name:"",
         birthday:"",
-        photoURL:store.state.user.data.info.photoUrl||''
+        photoURL:store.state.userData.info.photoUrl||''
       }
     }),
     methods:{
@@ -135,7 +135,7 @@
     },
     created() {
       this.active=false
-      //console.log('test')
+      console.log('store.state.userData',store.state.userData)
       let self=this
       firebase.auth().onAuthStateChanged(user => {
         if (user){

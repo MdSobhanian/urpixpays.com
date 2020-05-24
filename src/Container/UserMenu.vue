@@ -42,7 +42,7 @@
           email: "",
           name:"",
           birthday:"",
-          photoURL:store.state.user.data.info.photoUrl||''
+          photoURL:store.state.userData.info.photoUrl||''
         }
       }
     },
@@ -51,8 +51,8 @@
       firebase.auth().onAuthStateChanged(user => {
         if (user){
            console.log('username', store.state.user.data)
-          self.email = store.state.user.data.info.email
-          self.name = store.state.user.data.info.name
+          self.email = store.state.userData.info.email
+          self.name = store.state.userData.info.name
           switch (this.$router.currentRoute.name) {
             case 'GuestHome':
             // case 'InfoPage':

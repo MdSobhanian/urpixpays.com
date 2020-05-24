@@ -6,8 +6,8 @@ export default new Vuex.Store({
   state: {
     user: {
       loggedIn: false,
-      data: null
-    }
+    },
+    userData:{}
   },
   getters: {
     user(state) {

@@ -24,7 +24,6 @@
         </div>
         <vs-prompt
           color="rgb(60, 139, 221)"
-          @cancel=""
           cancel-text="Cancel"
           @accept="join_Challenge()"
           accept-text="Continue"
@@ -42,7 +41,6 @@
   </div>
 </template>
 <script>
-  import userinfo from '../store'
   import store from "../store";
   export default {
     props: {
@@ -56,7 +54,7 @@
       }
     },
     created() {
-      console.log('userinfocheck',userinfo.state.user.data.email)
+    
       let self=this
       var currentDate = new Date()
       var startDate = new Date(this.start_at)
@@ -100,7 +98,6 @@
             status:'Active'
           }
         }
-        console.log(join_item)
         window.axios.post(`${process.env.VUE_APP_API_URL}join_challenge`, {data:join_item,uid:store.state.userData.auth.uid}).then(({data})=>{
           this.$vs.notify(data.notify);
         })

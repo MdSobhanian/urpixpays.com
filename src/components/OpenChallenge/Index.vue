@@ -5,6 +5,7 @@
 </template>
 <script>
   import Challenge from "../Challenge";
+  import store from "../../store"
   export default {
     components:{
       Challenge
@@ -20,17 +21,7 @@
     mounted() {
     },
     methods:{
-      readData() {
-        window.axios.post(
-          `${process.env.VUE_APP_API_URL}getChallenges`,
-          {
-
-          }
-        ).then(({data})=>{
-          this.cList=data.result
-          console.log('getchallengeslist',this.cList)
-        })
-      },
+     
     }
   }
 </script>

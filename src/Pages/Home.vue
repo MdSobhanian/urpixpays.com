@@ -37,14 +37,27 @@
         tabIndex: 0
       }
     },
+    created(){
+      this.readData()
+    },
     methods: {
       linkClass(idx) {
-        // if (this.tabIndex === idx) {
-        //   return ['bg-primary', 'text-light']
-        // } else {
-        //   return ['bg-light', 'text-info']
-        // }
-      }
+        /* if (this.tabIndex === idx) {
+          return ['bg-primary', 'text-light']
+        } else {
+          return ['bg-light', 'text-info']
+        } */
+      },
+      readData() {
+        window.axios.post(
+          `${process.env.VUE_APP_API_URL}getMyJoinChallenge`,
+          {
+              uid:store.state.userData.auth.uid
+          }
+        ).then(({data})=>{
+          console.log('getMyJoinChallenge',data.result)
+        })
+    },
     }
   }
 </script>

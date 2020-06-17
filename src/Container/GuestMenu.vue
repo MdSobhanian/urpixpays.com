@@ -1,7 +1,7 @@
 <template>
   <b-navbar toggleable="lg" type="dark" style="background-color: #161e2c">
     <b-navbar-brand href="#">
-      <img src="http://resource.crazy-about-photography.com/static/imgs/Logo-Horizontal-Small.gif" alt="this slowpoke moves" width=150/>
+      <img src="https://sss.crazy-about-photography.com/resource/static/imgs/Logo-Horizontal-Small.gif" alt="this slowpoke moves" width=150/>
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

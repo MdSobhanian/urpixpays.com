@@ -3,7 +3,7 @@
     <div class="row" style="z-index: 0;">
       <div class="col-sm-3" style="margin-bottom: 20px">
         <div class="footer li_style widget_text" style="color:white; text-declaton:none;text-align: left">
-        <img src="http://resource.crazy-about-photography.com/static/imgs/Logo-Horizontal-Small.gif" width="150px" style="border-radius: 20%;">
+        <img src="https://sss.crazy-about-photography.com/resource/static/imgs/Logo-Horizontal-Small.gif" width="150px" style="border-radius: 20%;">
         </div>
       </div>
       <div class="col-sm-2" style="margin-bottom: 20px">

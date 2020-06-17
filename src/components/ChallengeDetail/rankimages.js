@@ -3,24 +3,24 @@ export default
   {
     rank:'1',
     votes:'2342',
-    url:'http://resource.crazy-about-photography.com/static/imgs/landing/mission.PNG',
+    url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/mission.PNG',
     name:'SohaSobhanian',
     country:'Unit States',
     images:[
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/mission.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/mission.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/quality.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/quality.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/selling.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/selling.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/art.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/art.PNG',
         votes:'56'
       }
       ]
@@ -28,24 +28,24 @@ export default
   {
     rank:'2',
     votes:'2342',
-    url:'http://resource.crazy-about-photography.com/static/imgs/landing/quality.PNG',
+    url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/quality.PNG',
     name:'SohaSobhanian',
     country:'Unit States',
     images:[
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/mission.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/mission.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/quality.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/quality.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/selling.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/selling.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/art.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/art.PNG',
         votes:'56'
       }
     ]
@@ -54,24 +54,24 @@ export default
   {
     rank:'3',
     votes:'2342',
-    url:'http://resource.crazy-about-photography.com/static/imgs/landing/selling.PNG',
+    url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/selling.PNG',
     name:'SohaSobhanian',
     country:'Unit States',
     images:[
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/mission.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/mission.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/quality.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/quality.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/selling.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/selling.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/art.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/art.PNG',
         votes:'56'
       }
     ]
@@ -80,24 +80,24 @@ export default
   {
     rank:'4',
     votes:'2342',
-    url:'http://resource.crazy-about-photography.com/static/imgs/landing/art.PNG',
+    url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/art.PNG',
     name:'SohaSobhanian',
     country:'Unit States',
     images:[
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/mission.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/mission.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/quality.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/quality.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/selling.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/selling.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/art.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/art.PNG',
         votes:'56'
       }
     ]
@@ -111,19 +111,19 @@ export default
     country:'Unit States',
     images:[
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/mission.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/mission.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/quality.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/quality.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/selling.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/selling.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/art.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/art.PNG',
         votes:'56'
       }
     ]
@@ -137,19 +137,19 @@ export default
     country:'Unit States',
     images:[
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/mission.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/mission.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/quality.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/quality.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/selling.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/selling.PNG',
         votes:'56'
       },
       {
-        url:'http://resource.crazy-about-photography.com/static/imgs/landing/art.PNG',
+        url:'https://sss.crazy-about-photography.com/resource/static/imgs/landing/art.PNG',
         votes:'56'
       }
     ]

@@ -40,9 +40,11 @@
             } else {
               self.isMenu=false
             }
+            this.$emit('show',true)
           })
         }else{
           self.isMenu=false
+          this.$emit('show',true)
         }
         // console.log("this.isMenu",this.isMenu)
       })

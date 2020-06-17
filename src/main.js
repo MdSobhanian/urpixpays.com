@@ -66,8 +66,14 @@ import Loader from "./components/Loader";
 Vue.component('loader',Loader)
 /* eslint-disable no-new */
 window.Event = new Vue();
+window.axios = require('axios');
+window.axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+window.axios.defaults.baseURL = 'https://35.181.127.170:3000/';
 Vue.prototype.$getResourceUrl=function getResourceUrl(val){
   return process.env.VUE_APP_R_URL+val;
+}
+Vue.prototype.$getLocalfileUrl=function getResourceUrl(file){
+  return URL.createObjectURL(file);
 }
 new Vue({
   el: '#app',
@@ -76,6 +82,4 @@ new Vue({
   template: '<App/>',
 })
 
-window.axios = require('axios');
-window.axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-window.axios.defaults.baseURL = 'http://35.181.127.170:3000/';
+

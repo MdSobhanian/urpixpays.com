@@ -1,7 +1,7 @@
 <template>
   <b-navbar class="user_menu" toggleable="lg" type="dark" style="background-color: #161e2c">
     <b-navbar-brand href="#">
-      <img src="http://resource.crazy-about-photography.com/static/imgs/Logo-Horizontal-Small.gif" alt="this slowpoke moves" width=150/></b-navbar-brand>
+      <img src="https://sss.crazy-about-photography.com/resource/static/imgs/Logo-Horizontal-Small.gif" alt="this slowpoke moves" width=150/></b-navbar-brand>
     <div class="navbar-menu">
       <b-navbar-nav class="main_menu">
         <b-nav-item v-bind:to="'/home'">CHALLENGE</b-nav-item>

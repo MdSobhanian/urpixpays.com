@@ -140,7 +140,7 @@
           });
       },
       setUser(data){
-        window.axios.post('http://13.233.42.88:3000/setUser',{collection:'users',data:data}).then(({data})=>{
+        window.axios.post('https://13.233.42.88:3000/setUser',{collection:'users',data:data}).then(({data})=>{
         })
       },
       emailLink(email){

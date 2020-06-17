@@ -729,8 +729,10 @@ button:focus {
     .c_imgs{
       padding: 6px;
       border-right: solid 1px #ededed;
+      width: 100%;
       .c_imgs_body{
         display: flex;
+        justify-content: space-around;
         .img{
           //border-radius: 5px;
           margin: 2px 2px 10px 2px;

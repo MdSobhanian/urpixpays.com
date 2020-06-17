@@ -5,16 +5,16 @@
       <div slot="header">
         <div style="position: relative;cursor: pointer" @click="gotoChallengeDetail">
               <span style="float: left">
-                Prize:$300
+                Prize:${{cData.prize||0}}
               </span>
           <span style="float: right">
-                Votes:50K
+                Votes:{{cData.votes||0}}
               </span>
-          <div style="font-size: 18px;font-weight: bold">{{cData.c_name}}</div>
+          <div style="font-size: 18px;font-weight: bold">{{cData.title||"default title"}}</div>
         </div>
       </div>
       <div class="main_img"
-           :style="{'background-image':`url('${cData.c_img}')`}"
+           :style="{'background-image':`url('${cData.img_url}')`}"
            v-bind:to="'/challenge-detail/'">
         <div class="c_handle">
           <div class="c_handle_item" v-if="status=='open'">
@@ -22,7 +22,7 @@
               :total="wand.total"
               :val="wand.val"
               :key="JSON.stringify(wand)"
-              :images="['http://resource.crazy-about-photography.com/static/imgs/challenge/pan.png','http://resource.crazy-about-photography.com/static/imgs/challenge/niddle.png']"
+              :images="['https://sss.crazy-about-photography.com/resource/static/imgs/challenge/pan.png','https://sss.crazy-about-photography.com/resource/static/imgs/challenge/niddle.png']"
             />
             <div class="pin_div" @click="wandDlg=true">
 <!--              <vs-avatar size="45px" src="https://urpixpays.com/public/img/wand_my.gif"/>-->
@@ -46,15 +46,11 @@
             </vs-prompt>
           </div>
           <div class="c_handle_item">
-<!--            <div style="display: flex ;justify-content: center;">-->
-<!--              <div class="vote_title">500K</div>-->
-<!--              <img src="https://urpixpays.com/public/img/vote_btn.gif" width="30"/>-->
-<!--            </div>-->
             <div v-if="status=='open'">
               <b-button @click="popupVote=true" class="vite_btn" variant="outline-dark" size="sm"
                         style="width: 70px;margin-top: 32px">Vote
               </b-button>
-              <vs-popup v-if="popupVote" fullscreen title="fullscreen" :active.sync="popupVote">
+              <vs-popup v-if="popupVote" fullscreen :title="cData.title" :active.sync="popupVote">
                 <votes></votes>
               </vs-popup>
             </div>
@@ -64,7 +60,7 @@
               :total="charge.total"
               :val="charge.val"
               :key="JSON.stringify(charge)"
-              :images="['http://resource.crazy-about-photography.com/static/imgs/challenge/charge.png','http://resource.crazy-about-photography.com/static/imgs/challenge/niddle.png']"
+              :images="['https://sss.crazy-about-photography.com/resource/static/imgs/challenge/charge.png','https://sss.crazy-about-photography.com/resource/static/imgs/challenge/niddle.png']"
             />
             <div class="pin_div" @click="chargeDlg=true">
 <!--              <vs-avatar size="45px" src="https://urpixpays.com/public/img/charge_btn.gif"/>-->
@@ -87,41 +83,25 @@
               </div>
             </vs-prompt>
           </div>
-<!--          <div class="c_handle_item">-->
-<!--            <div style="display: flex ;justify-content: center;">-->
-<!--              <div class="vote_title">500K</div>-->
-<!--              <img src="https://urpixpays.com/public/img/vote_btn.gif" width="30"/>-->
-<!--            </div>-->
-<!--            <div v-if="status=='open'">-->
-<!--              <b-button @click="popupVote=true" class="vite_btn" variant="outline-dark" size="sm"-->
-<!--                        style="width: 70px;margin-top: 32px">Vote-->
-<!--              </b-button>-->
-<!--              <vs-popup v-if="popupVote" fullscreen title="fullscreen" :active.sync="popupVote">-->
-<!--                <votes></votes>-->
-<!--              </vs-popup>-->
-<!--            </div>-->
-<!--          </div>-->
         </div>
         <div  @click="gotoChallengeDetail" class="challenge_detail" >Challenge Details</div>
         <div class="left_time">{{status=='open'?'18D 12h:15m:00s':'Ended'}}</div>
       </div>
       <div class="c_imgs">
         <div @click="openConfirm()" class="c_imgs_body">
-          <div class="img"
-               style="background-image: url('https://urpixpays.com/public/uploads/images/f99687dd719c4e8bc6a39e946c3d9ef74667.jpg')">
-            <span class="vote_count">6</span>
-          </div>
-          <div class="img"
-               style="background-image: url('https://urpixpays.com/public/uploads/images/cf77069b93279213eddc1ed904c3710c4669.jpg')">
-            <span class="vote_count">6</span>
-          </div>
-          <div class="img"
-               style="background-image: url('https://urpixpays.com/public/uploads/images/4efdd2f969559e8b1c92e99f32ded48e4681.jpg')">
-            <span class="vote_count">6</span>
-          </div>
-          <div class="img"
-               style="background-image: url('https://urpixpays.com/public/uploads/images/361f69d3b324078d0d1c44f509697c0e1688.jpeg')">
-            <span class="vote_count">6</span>
+          <div v-for="item in cData.photo_count">
+            <div v-if="cData.imageList && cData.imageList[item-1]"
+              class="img"
+              :style="{'background-image':`url(${cData.imageList[item-1].info.url})`}"
+            >
+              <span class="vote_count">{{cData.imageList[item-1].variable.vote_count}}</span>
+            </div>
+            <div v-else
+                 class="img"
+                 :style="{'background-image':`url(${$getResourceUrl('static/imgs/uploadimg.jpg')})`}"
+            >
+<!--              <span class="vote_count">6</span>-->
+            </div>
           </div>
         </div>
         <div class="c_imgs_footer" v-if="status=='open'">
@@ -135,17 +115,16 @@
         @cancel=""
         @accept="uploadedImg"
         accept-text="Upload"
-        title="Click here or drag photo to upload or flip."
-        buttonAccept="false"
-        buttonCancel="false"
+        title="Click here or upload or flip."
         :active.sync="activePrompt2">
 
         <div class="con-exemple-prompt">
           <div class="centerx" style="width: auto">
-            <vs-upload action="" @on-success="successUpload" @update:vsFile="getImg"
-                       :limit="4" multiple
+            <t-file-upload @change="getImg"
+                       :limit="cData.photo_count" multiple :gFileList="cData.imageList"
             />
           </div>
+
         </div>
       </vs-prompt>
     </vs-card>
@@ -155,6 +134,8 @@
   // import MeterPan from './MeterPan/MeterPan'
   // import MeterPan1 from './MeterPan1'
   import Votes from "../ChallengeDetail/Votes";
+  import TFileUpload from "../TFileUpload";
+  import store from "../../store";
 
   export default {
     props: {
@@ -164,46 +145,12 @@
       },
       cData: {
         type: Object,
-        default: function () {
-          return {
-            c_id: '1',
-            c_name: 'test',
-            charge_at: {
-              seconds: 12456,
-              nanoseconds: '456'
-            },
-            wand_at: {
-              seconds: 12456,
-              nanoseconds: '456'
-            },
-            imgs: [
-              {
-                id: 'test1',
-                url: 'https://urpixpays.com/public/uploads/images/f99687dd719c4e8bc6a39e946c3d9ef74667.jpg'
-              },
-              {
-                id: 'test1',
-                url: 'https://urpixpays.com/public/uploads/images/cf77069b93279213eddc1ed904c3710c4669.jpg'
-              },
-              {
-                id: 'test1',
-                url: 'https://urpixpays.com/public/uploads/images/4efdd2f969559e8b1c92e99f32ded48e4681.jpg'
-              },
-              {
-                id: 'test1',
-                url: 'https://urpixpays.com/public/uploads/images/361f69d3b324078d0d1c44f509697c0e1688.jpeg'
-              }
-            ],
-            rank: 1,
-            u_id: '123',
-            amountOfImg: 4,
-          }
-        }
+        default: ()=>{{}}
       }
 
     },
     components: {
-       Votes
+       Votes,TFileUpload
     },
     mounted() {
       //this.$refs.videoRef.src = "";
@@ -245,15 +192,70 @@
         // console.log(this.charge)
         this.$vs.notify({color: 'success', title: 'Wand Success', text: 'Wand is working'})
       },
-      successUpload(res) {
-        console.log('successUpload', res)
-        this.$vs.notify({color: 'success', title: 'Upload Success', text: 'Lorem ipsum dolor sit amet, consectetur'})
-      },
       uploadedImg() {
-
+        this.imgs.forEach(item=>{
+          let formData = new FormData();
+          formData.append('file', item.file);
+          formData.append('path', `img/challenges/${this.cData._id}/${store.state.userData.auth.uid}/`);
+          window.axios.post(
+            `${process.env.VUE_APP_API_URL}upload-file`, formData, {
+              headers: {
+                'Content-Type': 'multipart/form-data'
+              }
+            }
+          ).then((uploadResult) => {
+            let img_url = uploadResult.data.data.url
+            window.axios.post(
+              `${process.env.VUE_APP_API_URL}saveImage`, {c_id:this.cData._id,img_url:img_url,uid:store.state.userData.auth.uid,i_id:item._id}
+            ).then(({
+                      data
+                    }) => {
+             /* data.result.ops.forEach(item=>{
+                self.dataList.unshift(item)
+              })*/
+              //Object.assign(self.dataList, data.result.ops)
+              console.log('saveImage', data)
+              let index=this.cData.imageList.findIndex(item=>item._id===data._id)
+              if(index<0){
+                this.cData.imageList.push(data)
+              }else{
+                Object.assign(this.cData.imageList[index],data)
+              }
+              //this.warningModal = false
+              //this.reset()
+            })
+          });
+        })
+        /*let formData = new FormData();
+        formData.append('file', this.c_img_file);
+        formData.append('path', `img/challenges/${this.cData._id}`);
+        window.axios.post(
+          `${process.env.VUE_APP_API_URL}upload-file`, formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            }
+          }
+        ).then((uploadResult) => {
+          this.newChallenge.img_url = uploadResult.data.data.url
+          this.newChallenge.created_at = new Date().toISOString()
+          window.axios.post(
+            `${process.env.VUE_APP_APIURL}saveChallenge`, this.newChallenge
+          ).then(({
+                    data
+                  }) => {
+            data.result.ops.forEach(item=>{
+              self.dataList.unshift(item)
+            })
+            //Object.assign(self.dataList, data.result.ops)
+            console.log('updated', data)
+            this.warningModal = false
+            this.reset()
+          })
+        });*/
       },
-      getImg(e) {
-        console.log('getFile', e)
+      getImg(files) {
+        this.imgs=files
+        console.log('getFile', this.imgs)
       },
       openConfirm() {
         this.$vs.dialog({

@@ -18,7 +18,7 @@
   .invite_challenge_container{
     width: 100%;
     height: 70vh;
-    background-image: url("http://resource.crazy-about-photography.com/static/imgs/challenge/invite_friends.PNG");
+    background-image: url("https://sss.crazy-about-photography.com/resource/static/imgs/challenge/invite_friends.PNG");
     background-size: cover;
     background-position: center;
     display: table;

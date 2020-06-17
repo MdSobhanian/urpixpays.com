@@ -54,7 +54,7 @@
       }
     },
     created() {
-    
+
       let self=this
       var currentDate = new Date()
       var startDate = new Date(this.start_at)
@@ -88,7 +88,7 @@
         return `${h.toFixed(0)}:${m.toFixed(0)}:${s.toFixed(0)}`
       },
       join_Challenge(){
-        console.log(this.cList2._id)
+        //console.log(this.cList2._id)
         let join_item={
           c_id: this.cList2._id,
           created_at: new Date().toISOString(),
@@ -100,6 +100,7 @@
         }
         window.axios.post(`${process.env.VUE_APP_API_URL}join_challenge`, {data:join_item,uid:store.state.userData.auth.uid}).then(({data})=>{
           this.$vs.notify(data.notify);
+          this.$emit('joined',this.cList2._id)
         })
       }
     }

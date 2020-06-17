@@ -18,13 +18,19 @@
   import images from "../../Pages/Guest/images";
   import AOS from "aos";
   export default {
+    props:{
+      gCList:{
+        type:Array,
+        default:()=>{[]}
+      }
+    },
     components:{
       ChallengeHeader,ChallengeItem
     },
     data(){
       return{
         mychallengedata,
-        cList:[],
+        cList:this.gCList,
         isGettingData:false,
         chatList: [
           { _id: '0',
@@ -105,8 +111,8 @@
     },
     methods:{
       test(){
-        this.cList[0].c_name='changed'
-        console.log(this.cList[0])
+        //this.cList[0].c_name='changed'
+        //console.log(this.cList[0])
       },
       handleScroll (event) {
         // Any code to be executed when the window is scrolled
@@ -124,12 +130,12 @@
       showMore(){
         let dataLength=this.cList.length
         //console.log(this.dataset.length,images.length)
-        if (dataLength===mychallengedata.length || this.isGettingData)return;
+        if (dataLength===this.gCList.length || this.isGettingData)return;
         this.isGettingData=true
         //console.log(dataLength)
-        for (let index=0;index<mychallengedata.length;index++){
+        for (let index=0;index<this.gCList.length;index++){
           if (index>=dataLength && index<=dataLength+1){
-            this.cList.push(mychallengedata[index])
+            this.cList.push(this.gCList[index])
           }
         }
         AOS.init({
@@ -138,7 +144,7 @@
         });
         this.isGettingData=false
       },
-      readData() {
+      /*readData() {
         window.axios.post(
           `${process.env.VUE_APP_API_URL}getChallenges`,
           {
@@ -149,7 +155,7 @@
           this.cList=data.result
           console.log('getchallengeslist',this.cList)
         })
-      },
+      },*/
     }
   }
 </script>

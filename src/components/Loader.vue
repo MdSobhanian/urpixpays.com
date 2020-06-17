@@ -14,7 +14,7 @@
     name: 'Loader',
     data(){
       return {
-        isShow:false
+        isShow:true
       }
     },
     mounted() {

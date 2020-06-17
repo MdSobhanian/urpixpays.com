@@ -27,7 +27,7 @@
                 </div>
               </div>
               <div class="zoom-img" @click="sel_index = index">
-                <b-icon icon="search" scale="1.1"></b-icon>
+                <v-icon>mdi-search</v-icon>
               </div>
             </div>
           </div>
